@@ -91,34 +91,96 @@ async function forecast(t: Trip) {
   };
 }
 
-// ---------- Open-Meteo archive: typical snowfall for the trip dates ----------
+// ---------- Typical trip week, from station history ----------
+// For each past season: snow depth on the first day of the trip, and new snow during the trip dates.
+// US: SNOTEL daily snow depth (new snow = sum of daily depth gains). Japan: JMA daily snowfall totals.
 
-async function climatology(t: Trip) {
-  const first = climatologyYears[0], last = climatologyYears[climatologyYears.length - 1];
-  const url =
-    `https://archive-api.open-meteo.com/v1/archive?latitude=${t.lat}&longitude=${t.lon}&elevation=${t.midM}` +
-    `&start_date=${first}-01-01&end_date=${last}-04-30&daily=snowfall_sum&timezone=auto`;
-  const j = await getJson(url);
-  const byDate = new Map<string, number>();
-  j.daily.time.forEach((date: string, i: number) => byDate.set(date, j.daily.snowfall_sum[i]));
-  const sm = t.start.slice(5), em = t.end.slice(5);
-  const perYear: { year: number; cm: number }[] = [];
-  for (const y of climatologyYears) {
-    let total = 0, n = 0;
-    for (let d = `${y}-${sm}`; d <= `${y}-${em}`; d = addDays(d, 1)) {
-      const v = byDate.get(d);
-      if (v != null) { total += v; n++; }
-    }
-    if (n > 0) perYear.push({ year: y, cm: round1(total)! });
-  }
-  const vals = perYear.map((p) => p.cm);
+function summarise(perYear: { year: number; startDepthCm: number | null; newSnowCm: number }[], method: string) {
+  const ok = perYear.filter((p) => p.newSnowCm != null);
+  const vals = ok.map((p) => p.newSnowCm);
+  const depths = ok.map((p) => p.startDepthCm).filter((v): v is number => v != null).sort((a, b) => a - b);
+  if (!vals.length) throw new Error("no historical data");
   return {
-    years: `${perYear[0]?.year}–${perYear[perYear.length - 1]?.year}`,
+    method,
+    years: `${ok[0].year}–${ok[ok.length - 1].year}`,
+    seasons: ok.length,
     avgCm: round1(vals.reduce((a, b) => a + b, 0) / vals.length),
     minCm: Math.min(...vals),
     maxCm: Math.max(...vals),
-    perYear,
+    medianStartDepthCm: depths.length ? depths[Math.floor(depths.length / 2)] : null,
+    perYear: ok,
   };
+}
+
+async function climatologySnotel(t: Trip, triplet: string) {
+  const first = climatologyYears[0], last = climatologyYears[climatologyYears.length - 1];
+  const data = await getJson(
+    `${AWDB}/data?stationTriplets=${triplet}&elements=SNWD&duration=DAILY` +
+      `&beginDate=${first - 1}-12-01&endDate=${last}-04-30&returnFlags=false`,
+  );
+  const vals: { date: string; value: number | null }[] = data[0]?.data?.[0]?.values ?? [];
+  const byDate = new Map(vals.map((v) => [v.date.slice(0, 10), v.value]));
+  const sm = t.start.slice(5), em = t.end.slice(5);
+  const perYear = [];
+  for (const y of climatologyYears) {
+    const s = `${y}-${sm}`, e = `${y}-${em}`;
+    let gain = 0, n = 0;
+    for (let d = s; d <= e; d = addDays(d, 1)) {
+      const a = byDate.get(addDays(d, -1)), b = byDate.get(d);
+      if (a != null && b != null) { n++; if (b > a) gain += b - a; }
+    }
+    if (n < 5) continue;
+    const sd = byDate.get(s);
+    perYear.push({ year: y, startDepthCm: sd != null ? round1(sd * IN_TO_CM) : null, newSnowCm: round1(gain * IN_TO_CM)! });
+  }
+  return summarise(perYear, "SNOTEL daily snow depth gains");
+}
+
+const ETRN = "https://www.data.jma.go.jp/stats/etrn";
+
+async function jmaBlockNo(precNo: number, name: string) {
+  const html = await getText(`${ETRN}/select/prefecture.php?prec_no=${precNo}`);
+  const m = html.match(new RegExp(`viewPoint\\('a','(\\d+)','${name}'`));
+  if (!m) {
+    const i = html.indexOf(name);
+    throw new Error(`etrn block for ${name} not found; context: ${i >= 0 ? html.slice(Math.max(0, i - 300), i + 100).replace(/\s+/g, " ") : "name absent"}`);
+  }
+  return m[1];
+}
+
+function parseEtrnDaily(html: string) {
+  // rows: <tr class="mtx" ...><td><div class="a_print"><a ...>DAY</a></div></td><td ...>v</td>...</tr>
+  const rows: Record<number, { snowCm: number | null; depthCm: number | null }> = {};
+  for (const tr of html.split('<tr class="mtx"').slice(1)) {
+    const cells = [...tr.split("</tr>")[0].matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map((m) => m[1].replace(/<[^>]+>/g, "").trim());
+    const day = Number(cells[0]);
+    if (!day) continue;
+    const num = (s: string) => (s === "--" ? 0 : /\d/.test(s) ? Number(s.replace(/[^\d.]/g, "")) : null);
+    // last two columns are snowfall (降雪 合計) and deepest snow depth (最深積雪)
+    rows[day] = { snowCm: num(cells[cells.length - 2] ?? ""), depthCm: num(cells[cells.length - 1] ?? "") };
+  }
+  return rows;
+}
+
+async function climatologyJma(t: Trip, stationName: string) {
+  const block = await jmaBlockNo(48, stationName);
+  const months = [...new Set([t.start.slice(5, 7), t.end.slice(5, 7)])];
+  const perYear = [];
+  for (const y of climatologyYears) {
+    const byDate = new Map<string, { snowCm: number | null; depthCm: number | null }>();
+    for (const mm of months) {
+      const html = await getText(`${ETRN}/view/daily_a1.php?prec_no=48&block_no=${block}&year=${y}&month=${Number(mm)}&day=&view=`);
+      for (const [day, v] of Object.entries(parseEtrnDaily(html))) byDate.set(`${y}-${mm}-${String(day).padStart(2, "0")}`, v);
+    }
+    let total = 0, n = 0;
+    for (let d = `${y}-${t.start.slice(5)}`; d <= `${y}-${t.end.slice(5)}`; d = addDays(d, 1)) {
+      const v = byDate.get(d)?.snowCm;
+      if (v != null) { total += v; n++; }
+    }
+    if (n < 5) continue;
+    perYear.push({ year: y, startDepthCm: byDate.get(`${y}-${t.start.slice(5)}`)?.depthCm ?? null, newSnowCm: total });
+  }
+  return summarise(perYear, `JMA daily snowfall, etrn block ${block}`);
 }
 
 // ---------- USDA SNOTEL ----------
@@ -145,6 +207,12 @@ async function snotel(t: Trip, triplet: string, label: string) {
   const d1 = asOf ? valueOn(series.SNWD, addDays(asOf, -1)) : null;
   const d7 = asOf ? valueOn(series.SNWD, addDays(asOf, -7)) : null;
   const median = swe?.median ?? null;
+  // new snow ≈ sum of daily depth gains (settling makes this a slight undercount)
+  let gain7 = 0;
+  if (asOf) for (let n = 0; n < 7; n++) {
+    const a = valueOn(series.SNWD, addDays(asOf, -n - 1)), b = valueOn(series.SNWD, addDays(asOf, -n));
+    if (a != null && b != null && b > a) gain7 += b - a;
+  }
   return {
     source: "USDA NRCS SNOTEL",
     station: label,
@@ -154,7 +222,8 @@ async function snotel(t: Trip, triplet: string, label: string) {
     depthCm: round1(depthIn != null ? depthIn * IN_TO_CM : null),
     depthChange24hCm: round1(depthIn != null && d1 != null ? (depthIn - d1) * IN_TO_CM : null),
     depthChange7dCm: round1(depthIn != null && d7 != null ? (depthIn - d7) * IN_TO_CM : null),
-    newSnow24hCm: null as number | null,
+    newSnow24hCm: round1(depthIn != null && d1 != null ? Math.max(0, depthIn - d1) * IN_TO_CM : null),
+    newSnow7dCm: round1(gain7 * IN_TO_CM),
     sweMm: round1(swe?.value != null ? swe.value * 25.4 : null),
     pctOfMedian: swe?.value != null && median ? Math.round((swe.value / median) * 100) : null,
   };
@@ -260,7 +329,7 @@ async function main() {
     const o = t.observation;
     const [fc, climo, observed] = await Promise.all([
       section("forecast", t, () => forecast(t)),
-      section("climatology", t, () => climatology(t)),
+      section("climatology", t, () => (o.kind === "snotel" ? climatologySnotel(t, o.triplet) : climatologyJma(t, o.stationName))),
       section("observed", t, () => (o.kind === "snotel" ? snotel(t, o.triplet, o.label) : jma(t, o.stationName, o.label))),
     ]);
     // Forecast snowfall that falls within the trip dates, once the trip is in range

@@ -94,4 +94,4 @@ export const trips: Trip[] = [
 ];
 
 /** Seasons used for the "typical trip week" figure (season ending in each year). */
-export const climatologyYears = [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026];
+export const climatologyYears = [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026];
