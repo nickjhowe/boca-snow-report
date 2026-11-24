@@ -265,15 +265,19 @@
     render();
   });
 
+  function failed() {
+    root.innerHTML = '<p>Today\'s snow report didn\'t load. Try refreshing the page, or check the resorts\' own reports: ' +
+      '<a href="https://www.vail.com/the-mountain/mountain-conditions/snow-and-weather-report.aspx">Vail</a>, ' +
+      '<a href="https://www.steamboat.com/the-mountain/mountain-report">Steamboat</a>, ' +
+      '<a href="https://skiwhitefish.com/snowreport/">Whitefish</a>, ' +
+      '<a href="https://www.hakubavalley.com/en/">Hakuba Valley</a>.</p>';
+  }
+  // Data arrives as snow.js calling window.bscSnowData(...) — a plain <script> load, which works under
+  // strict site security policies and needs no CORS.
+  window.bscSnowData = function (j) { data = j; render(); };
   var bust = new Date().toISOString().slice(0, 13); // refresh at most hourly
-  fetch(BASE + "snow.json?v=" + bust)
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function (j) { data = j; render(); })
-    .catch(function () {
-      root.innerHTML = '<p>Today\'s snow report didn\'t load. Try refreshing the page, or check the resorts\' own reports: ' +
-        '<a href="https://www.vail.com/the-mountain/mountain-conditions/snow-and-weather-report.aspx">Vail</a>, ' +
-        '<a href="https://www.steamboat.com/the-mountain/mountain-report">Steamboat</a>, ' +
-        '<a href="https://skiwhitefish.com/snowreport/">Whitefish</a>, ' +
-        '<a href="https://www.hakubavalley.com/en/">Hakuba Valley</a>.</p>';
-    });
+  var tag = document.createElement("script");
+  tag.src = BASE + "snow.js?v=" + bust;
+  tag.onerror = failed;
+  document.head.appendChild(tag);
 })();

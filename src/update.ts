@@ -347,6 +347,8 @@ async function main() {
 
   const json = { generatedAt: new Date().toISOString(), trips: out, errors };
   await writeFile(OUT, JSON.stringify(json, null, 2) + "\n");
+  // Same data wrapped in a function call, for pages whose security policy only allows <script> loads
+  await writeFile(new URL("../docs/snow.js", import.meta.url), `window.bscSnowData && window.bscSnowData(${JSON.stringify(json)});\n`);
   console.log(`Wrote ${OUT.pathname}${errors.length ? ` with ${errors.length} error(s):\n  ` + errors.join("\n  ") : ""}`);
 
   if (process.env.DISCOVER) {

@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["src/**", ".github/workflows/**"]
+    paths: ["src/**", "docs/widget.js", ".github/workflows/**"]
 
 permissions:
   contents: write
@@ -14,6 +14,10 @@ permissions:
 concurrency:
   group: snow-report
   cancel-in-progress: false
+
+env:
+  BUCKET: bocaskiclub-snow-report
+  HAS_KEY: ${{ secrets.GCP_SA_KEY != '' }}
 
 jobs:
   update:
@@ -34,3 +38,18 @@ jobs:
           git commit -m "Snow report $(date -u +%Y-%m-%d)"
           git pull --rebase
           git push
+      # Publish to Google Cloud Storage, which bocaskiclub.com's security policy allows
+      - name: Authenticate to Google Cloud
+        if: env.HAS_KEY == 'true'
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+      - name: Set up gcloud
+        if: env.HAS_KEY == 'true'
+        uses: google-github-actions/setup-gcloud@v2
+      - name: Upload to bucket
+        if: env.HAS_KEY == 'true'
+        run: |
+          for f in widget.js snow.js snow.json; do
+            gcloud storage cp "docs/$f" "gs://$BUCKET/$f" --cache-control="public, max-age=300"
+          done
