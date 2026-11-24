@@ -89,7 +89,7 @@ export const trips: Trip[] = [
     baseM: 760,
     midM: 1300,
     summitM: 1831,
-    observation: { kind: "jma", stationName: "白馬", label: "JMA Hakuba station" },
+    observation: { kind: "jma", stationName: "白馬", label: "JMA Hakuba village station" },
   },
 ];
 
