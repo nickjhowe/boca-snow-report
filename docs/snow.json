@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T17:08:47.701Z",
+  "generatedAt": "2026-11-24T17:12:02.636Z",
   "trips": [
     {
       "id": "vail",
@@ -24,7 +24,8 @@
         "depthCm": 10.2,
         "depthChange24hCm": 2.5,
         "depthChange7dCm": 10.2,
-        "newSnow24hCm": null,
+        "newSnow24hCm": 2.5,
+        "newSnow7dCm": 15.2,
         "sweMm": 25.4,
         "pctOfMedian": 29,
         "stale": false
@@ -216,54 +217,88 @@
         "stale": false
       },
       "climatology": {
-        "years": "2016–2026",
-        "avgCm": 13.5,
-        "minCm": 1.9,
-        "maxCm": 39.3,
+        "method": "SNOTEL daily snow depth gains",
+        "years": "2012–2026",
+        "seasons": 15,
+        "avgCm": 20.7,
+        "minCm": 0,
+        "maxCm": 58.4,
+        "medianStartDepthCm": 81.3,
         "perYear": [
           {
+            "year": 2012,
+            "startDepthCm": 58.4,
+            "newSnowCm": 33
+          },
+          {
+            "year": 2013,
+            "startDepthCm": 45.7,
+            "newSnowCm": 10.2
+          },
+          {
+            "year": 2014,
+            "startDepthCm": 119.4,
+            "newSnowCm": 43.2
+          },
+          {
+            "year": 2015,
+            "startDepthCm": 81.3,
+            "newSnowCm": 7.6
+          },
+          {
             "year": 2016,
-            "cm": 9.8
+            "startDepthCm": 88.9,
+            "newSnowCm": 25.4
           },
           {
             "year": 2017,
-            "cm": 22.8
+            "startDepthCm": 124.5,
+            "newSnowCm": 7.6
           },
           {
             "year": 2018,
-            "cm": 12.6
+            "startDepthCm": 53.3,
+            "newSnowCm": 22.9
           },
           {
             "year": 2019,
-            "cm": 11.6
+            "startDepthCm": 78.7,
+            "newSnowCm": 15.2
           },
           {
             "year": 2020,
-            "cm": 16.4
+            "startDepthCm": 88.9,
+            "newSnowCm": 22.9
           },
           {
             "year": 2021,
-            "cm": 3.4
+            "startDepthCm": 63.5,
+            "newSnowCm": 5.1
           },
           {
             "year": 2022,
-            "cm": 2
+            "startDepthCm": 96.5,
+            "newSnowCm": 5.1
           },
           {
             "year": 2023,
-            "cm": 19.5
+            "startDepthCm": 99.1,
+            "newSnowCm": 33
           },
           {
             "year": 2024,
-            "cm": 39.3
+            "startDepthCm": 71.1,
+            "newSnowCm": 58.4
           },
           {
             "year": 2025,
-            "cm": 8.9
+            "startDepthCm": 96.5,
+            "newSnowCm": 20.3
           },
           {
             "year": 2026,
-            "cm": 1.9
+            "startDepthCm": 48.3,
+            "newSnowCm": 0
           }
         ],
         "stale": false
@@ -293,7 +328,8 @@
         "depthCm": 20.3,
         "depthChange24hCm": 0,
         "depthChange7dCm": 10.2,
-        "newSnow24hCm": null,
+        "newSnow24hCm": 0,
+        "newSnow7dCm": 15.2,
         "sweMm": 45.7,
         "pctOfMedian": 21,
         "stale": false
@@ -485,54 +521,88 @@
         "stale": false
       },
       "climatology": {
-        "years": "2016–2026",
-        "avgCm": 11.9,
-        "minCm": 0.5,
-        "maxCm": 45.3,
+        "method": "SNOTEL daily snow depth gains",
+        "years": "2012–2026",
+        "seasons": 15,
+        "avgCm": 34.9,
+        "minCm": 0,
+        "maxCm": 116.8,
+        "medianStartDepthCm": 205.7,
         "perYear": [
           {
+            "year": 2012,
+            "startDepthCm": 154.9,
+            "newSnowCm": 10.2
+          },
+          {
+            "year": 2013,
+            "startDepthCm": 116.8,
+            "newSnowCm": 66
+          },
+          {
+            "year": 2014,
+            "startDepthCm": 208.3,
+            "newSnowCm": 63.5
+          },
+          {
+            "year": 2015,
+            "startDepthCm": 144.8,
+            "newSnowCm": 7.6
+          },
+          {
             "year": 2016,
-            "cm": 15.7
+            "startDepthCm": 208.3,
+            "newSnowCm": 61
           },
           {
             "year": 2017,
-            "cm": 5.9
+            "startDepthCm": 271.8,
+            "newSnowCm": 5.1
           },
           {
             "year": 2018,
-            "cm": 5.9
+            "startDepthCm": 152.4,
+            "newSnowCm": 27.9
           },
           {
             "year": 2019,
-            "cm": 14.9
+            "startDepthCm": 284.5,
+            "newSnowCm": 53.3
           },
           {
             "year": 2020,
-            "cm": 15.1
+            "startDepthCm": 218.4,
+            "newSnowCm": 22.9
           },
           {
             "year": 2021,
-            "cm": 8.3
+            "startDepthCm": 119.4,
+            "newSnowCm": 30.5
           },
           {
             "year": 2022,
-            "cm": 2.1
+            "startDepthCm": 223.5,
+            "newSnowCm": 7.6
           },
           {
             "year": 2023,
-            "cm": 45.3
+            "startDepthCm": 243.8,
+            "newSnowCm": 116.8
           },
           {
             "year": 2024,
-            "cm": 0.5
+            "startDepthCm": 203.2,
+            "newSnowCm": 0
           },
           {
             "year": 2025,
-            "cm": 7.3
+            "startDepthCm": 205.7,
+            "newSnowCm": 17.8
           },
           {
             "year": 2026,
-            "cm": 9.4
+            "startDepthCm": 149.9,
+            "newSnowCm": 33
           }
         ],
         "stale": false
@@ -562,7 +632,8 @@
         "depthCm": 40.6,
         "depthChange24hCm": -2.5,
         "depthChange7dCm": 15.2,
-        "newSnow24hCm": null,
+        "newSnow24hCm": 0,
+        "newSnow7dCm": 20.3,
         "sweMm": 88.9,
         "pctOfMedian": 46,
         "stale": false
@@ -754,54 +825,88 @@
         "stale": false
       },
       "climatology": {
-        "years": "2016–2026",
-        "avgCm": 9,
+        "method": "SNOTEL daily snow depth gains",
+        "years": "2012–2026",
+        "seasons": 15,
+        "avgCm": 22.9,
         "minCm": 0,
-        "maxCm": 22,
+        "maxCm": 45.7,
+        "medianStartDepthCm": 231.1,
         "perYear": [
           {
+            "year": 2012,
+            "startDepthCm": 243.8,
+            "newSnowCm": 15.2
+          },
+          {
+            "year": 2013,
+            "startDepthCm": 266.7,
+            "newSnowCm": 27.9
+          },
+          {
+            "year": 2014,
+            "startDepthCm": 223.5,
+            "newSnowCm": 43.2
+          },
+          {
+            "year": 2015,
+            "startDepthCm": 231.1,
+            "newSnowCm": 7.6
+          },
+          {
             "year": 2016,
-            "cm": 2.2
+            "startDepthCm": 215.9,
+            "newSnowCm": 10.2
           },
           {
             "year": 2017,
-            "cm": 22
+            "startDepthCm": 287,
+            "newSnowCm": 33
           },
           {
             "year": 2018,
-            "cm": 12.9
+            "startDepthCm": 302.3,
+            "newSnowCm": 33
           },
           {
             "year": 2019,
-            "cm": 20.4
+            "startDepthCm": 205.7,
+            "newSnowCm": 45.7
           },
           {
             "year": 2020,
-            "cm": 7.6
+            "startDepthCm": 284.5,
+            "newSnowCm": 30.5
           },
           {
             "year": 2021,
-            "cm": 10.2
+            "startDepthCm": 276.9,
+            "newSnowCm": 27.9
           },
           {
             "year": 2022,
-            "cm": 0
+            "startDepthCm": 233.7,
+            "newSnowCm": 0
           },
           {
             "year": 2023,
-            "cm": 10.4
+            "startDepthCm": 185.4,
+            "newSnowCm": 20.3
           },
           {
             "year": 2024,
-            "cm": 8.9
+            "startDepthCm": 162.6,
+            "newSnowCm": 38.1
           },
           {
             "year": 2025,
-            "cm": 1.9
+            "startDepthCm": 167.6,
+            "newSnowCm": 5.1
           },
           {
             "year": 2026,
-            "cm": 2.1
+            "startDepthCm": 210.8,
+            "newSnowCm": 5.1
           }
         ],
         "stale": false
@@ -1024,54 +1129,88 @@
         "stale": false
       },
       "climatology": {
-        "years": "2016–2026",
-        "avgCm": 47.3,
-        "minCm": 9.2,
-        "maxCm": 103.5,
+        "method": "JMA daily snowfall, etrn block 0396",
+        "years": "2012–2026",
+        "seasons": 15,
+        "avgCm": 38.7,
+        "minCm": 0,
+        "maxCm": 103,
+        "medianStartDepthCm": 32,
         "perYear": [
           {
+            "year": 2012,
+            "startDepthCm": 32,
+            "newSnowCm": 80
+          },
+          {
+            "year": 2013,
+            "startDepthCm": 77,
+            "newSnowCm": 29
+          },
+          {
+            "year": 2014,
+            "startDepthCm": 32,
+            "newSnowCm": 76
+          },
+          {
+            "year": 2015,
+            "startDepthCm": 85,
+            "newSnowCm": 101
+          },
+          {
             "year": 2016,
-            "cm": 30.1
+            "startDepthCm": null,
+            "newSnowCm": 20
           },
           {
             "year": 2017,
-            "cm": 38.1
+            "startDepthCm": 64,
+            "newSnowCm": 55
           },
           {
             "year": 2018,
-            "cm": 17.4
+            "startDepthCm": 23,
+            "newSnowCm": 10
           },
           {
             "year": 2019,
-            "cm": 96.7
+            "startDepthCm": 0,
+            "newSnowCm": 17
           },
           {
             "year": 2020,
-            "cm": 76.6
+            "startDepthCm": 0,
+            "newSnowCm": 19
           },
           {
             "year": 2021,
-            "cm": 27
+            "startDepthCm": 0,
+            "newSnowCm": 0
           },
           {
             "year": 2022,
-            "cm": 36.8
+            "startDepthCm": 70,
+            "newSnowCm": 40
           },
           {
             "year": 2023,
-            "cm": 9.2
+            "startDepthCm": 0,
+            "newSnowCm": 0
           },
           {
             "year": 2024,
-            "cm": 103.5
+            "startDepthCm": 26,
+            "newSnowCm": 103
           },
           {
             "year": 2025,
-            "cm": 61.5
+            "startDepthCm": 95,
+            "newSnowCm": 31
           },
           {
             "year": 2026,
-            "cm": 23.4
+            "startDepthCm": 0,
+            "newSnowCm": 0
           }
         ],
         "stale": false
