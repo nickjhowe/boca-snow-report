@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T17:13:49.249Z",
+  "generatedAt": "2026-11-24T17:15:15.832Z",
   "trips": [
     {
       "id": "vail",
@@ -929,7 +929,7 @@
       },
       "observed": {
         "source": "Japan Meteorological Agency (AMeDAS)",
-        "station": "JMA Hakuba station",
+        "station": "JMA Hakuba village station",
         "stationElevM": 703,
         "distanceKm": 3,
         "asOf": "2026-11-25T02:00+09:00",
