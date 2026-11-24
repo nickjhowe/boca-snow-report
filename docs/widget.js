@@ -57,6 +57,13 @@
 #bsc-snow .day .fill{width:70%;max-width:34px;background:var(--snow);border:2px solid var(--ice2);border-bottom:0;border-radius:6px 6px 0 0;min-height:2px}
 #bsc-snow .day .amt{font-family:Archivo,sans-serif;font-weight:800;font-size:16px;border-top:2px solid var(--ink);padding-top:2px}
 #bsc-snow .day .t{color:var(--ink2);font-size:13px;white-space:nowrap}
+#bsc-snow .day.snowy .fill{background:linear-gradient(#fff,var(--ice));border-color:#2F6E95;border-width:3px}
+#bsc-snow .day.snowy .amt{color:#1F5F8B;font-size:19px}
+#bsc-snow .day.snowy .dn{color:#1F5F8B}
+#bsc-snow .incoming{display:flex;gap:12px;align-items:center;background:#16324F;color:#fff;border-radius:6px;padding:10px 16px;margin:18px 0 0}
+#bsc-snow .incoming svg{flex:none;width:30px;height:30px}
+#bsc-snow .incoming p{margin:0;font-size:16px}
+#bsc-snow .incoming b{font-family:Archivo,sans-serif;font-stretch:90%;font-weight:800;font-size:22px}
 #bsc-snow .week{background:var(--snow);border-radius:6px;padding:12px 16px;margin:18px 0 0}
 #bsc-snow .week p{margin:0}
 #bsc-snow .week .big{font-family:Archivo,sans-serif;font-stretch:90%;font-weight:800;font-size:22px}
@@ -83,6 +90,9 @@
   var style = document.createElement("style");
   style.textContent = css;
   document.head.appendChild(style);
+
+  // Set true to show snowpack badges even when they're below normal (hidden for now at the club's request)
+  var SHOW_LOW_SNOWPACK = false;
 
   // ---------- units ----------
   var units = "us";
@@ -193,14 +203,18 @@
     var newSnow7 = o.newSnow7dCm != null ? o.newSnow7dCm : f.modelSnowLast7dCm;
 
     var days = (f.days || []).slice(0, 7);
-    var maxSnow = Math.max(10, Math.max.apply(null, days.map(function (x) { return x.snowCm || 0; })));
+    var sf = function (x) { return x.summitSnowCm != null ? Math.max(x.summitSnowCm, x.snowCm || 0) : x.snowCm; };
+    var total7 = days.reduce(function (a, x) { return a + (sf(x) || 0); }, 0);
+    var best = days.reduce(function (b, x) { return (sf(x) || 0) > (sf(b) || 0) ? x : b; }, days[0] || {});
+    var maxSnow = Math.max(10, Math.max.apply(null, days.map(function (x) { return sf(x) || 0; })));
     var strip = days.map(function (x, i) {
-      var hPct = Math.round(((x.snowCm || 0) / maxSnow) * 100);
+      var cm = sf(x) || 0;
+      var hPct = Math.round((cm / maxSnow) * 100);
       var label = i === 0 ? "Today" : DOW[d(x.date).getDay()];
       return (
-        '<div class="day" title="' + codeText(x.code) + '"><div class="dn">' + label + "</div>" + icon(x.code) +
+        '<div class="day' + (cm >= 1.27 ? " snowy" : "") + '" title="' + codeText(x.code) + '"><div class="dn">' + label + "</div>" + icon(x.code) +
         '<div class="col"><div class="fill" style="height:' + hPct + '%"></div></div>' +
-        '<div class="amt">' + snow(x.snowCm) + '</div><div class="t"><span>' + temp(x.tMaxC) + '</span><span class="sl"> / </span><span>' + temp(x.tMinC) + "</span></div></div>"
+        '<div class="amt">' + snow(cm) + '</div><div class="t"><span>' + temp(x.tMaxC) + '</span><span class="sl"> / </span><span>' + temp(x.tMinC) + "</span></div></div>"
       );
     }).join("");
 
@@ -225,12 +239,14 @@
       '<ul class="now">' +
       "<li><b>" + snow(newSnow24) + "</b><span>new snow, 24 hours</span></li>" +
       "<li><b>" + snow(newSnow7) + "</b><span>new snow, 7 days</span></li>" +
-      "<li><b>" + signed(o.depthChange7dCm) + "</b><span>depth change, 7 days</span></li>" +
-      (o.pctOfMedian != null ? "<li><span>Snowpack</span><br>" + packBadge(o.pctOfMedian) + "</li>" : "") +
+      (o.depthChange7dCm > 0 ? "<li><b>" + signed(o.depthChange7dCm) + "</b><span>deeper than a week ago</span></li>" : "") +
+      (SHOW_LOW_SNOWPACK || o.pctOfMedian >= 85 ? (o.pctOfMedian != null ? "<li><span>Snowpack</span><br>" + packBadge(o.pctOfMedian) + "</li>" : "") : "") +
       "</ul>" +
+      (total7 >= 2.54 ? '<div class="incoming"><svg viewBox="0 0 30 30" aria-hidden="true"><g stroke="#BFDDEE" stroke-width="2.4" stroke-linecap="round"><path d="M15 3v24M4.6 9l20.8 12M4.6 21 25.4 9"/><path d="M11 5l4 3 4-3M11 25l4-3 4 3"/></g></svg><p><b>' + snow(total7) +
+        "</b> of fresh snow forecast this week" + (best && best.date ? ", most of it " + (best === days[0] ? "today" : "on " + ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][d(best.date).getDay()]) + " (" + snow(sf(best)) + ")" : "") + ".</p></div>" : "") +
       "<h4>Next 7 days on the mountain</h4><div class=\"days\">" + strip + "</div>" +
-      '<p class="note">Snowfall and temperatures at mid-mountain, ' + (US() ? Math.round(t.elevations.midM / 0.3048).toLocaleString() + " ft" : t.elevations.midM + " m") +
-      ". Next 7 days total: " + snow(f.next7dSnowCm) + ".</p>" +
+      '<p class="note">Snowfall at the summit, temperatures at mid-mountain, ' + (US() ? Math.round(t.elevations.midM / 0.3048).toLocaleString() + " ft" : t.elevations.midM + " m") +
+      ".</p>" +
       (week ? '<div class="week">' + week + "</div>" : "") +
       '<div class="actions"><a class="go' + (t.full ? " full" : "") + '" href="' + t.eventUrl + '">' + (t.full ? "View trip (full)" : "Sign up for this trip") + "</a>" +
       '<a class="more" href="' + t.officialReportUrl + '" target="_blank" rel="noopener">Official ' + t.resort + " snow report</a></div>" +
