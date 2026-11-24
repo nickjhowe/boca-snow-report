@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T17:51:24.118Z",
+  "generatedAt": "2026-11-24T17:57:10.282Z",
   "trips": [
     {
       "id": "vail",
@@ -41,11 +41,11 @@
             "date": "2026-11-24",
             "snowCm": 0,
             "summitSnowCm": 0.6,
-            "tMaxC": -2.4,
+            "tMaxC": -2.7,
             "tMinC": -11.9,
             "summitTMinC": -14.7,
             "code": 3,
-            "windMaxKmh": 16.8,
+            "windMaxKmh": 16.3,
             "precipProb": 11
           },
           {
@@ -53,8 +53,8 @@
             "snowCm": 0,
             "summitSnowCm": 0,
             "tMaxC": 3,
-            "tMinC": -7.6,
-            "summitTMinC": -10.9,
+            "tMinC": -7.4,
+            "summitTMinC": -11,
             "code": 3,
             "windMaxKmh": 12.6,
             "precipProb": 0
@@ -345,11 +345,11 @@
             "date": "2026-11-24",
             "snowCm": 0,
             "summitSnowCm": 0,
-            "tMaxC": -2,
+            "tMaxC": -2.2,
             "tMinC": -9.4,
             "summitTMinC": -12.3,
             "code": 45,
-            "windMaxKmh": 11.1,
+            "windMaxKmh": 10.5,
             "precipProb": 2
           },
           {
@@ -357,10 +357,10 @@
             "snowCm": 0,
             "summitSnowCm": 0,
             "tMaxC": 3.2,
-            "tMinC": -6.3,
-            "summitTMinC": -9.6,
+            "tMinC": -6.4,
+            "summitTMinC": -9.7,
             "code": 3,
-            "windMaxKmh": 10.5,
+            "windMaxKmh": 10.8,
             "precipProb": 0
           },
           {
@@ -649,20 +649,20 @@
             "date": "2026-11-24",
             "snowCm": 0,
             "summitSnowCm": 0,
-            "tMaxC": -2.1,
+            "tMaxC": -2.3,
             "tMinC": -7.8,
             "summitTMinC": -10,
             "code": 45,
-            "windMaxKmh": 17.7,
-            "precipProb": 3
+            "windMaxKmh": 17.9,
+            "precipProb": 4
           },
           {
             "date": "2026-11-25",
             "snowCm": 0,
             "summitSnowCm": 0,
             "tMaxC": 1.2,
-            "tMinC": -2.5,
-            "summitTMinC": -4.7,
+            "tMinC": -2.7,
+            "summitTMinC": -4.9,
             "code": 45,
             "windMaxKmh": 25.8,
             "precipProb": 4
