@@ -1,0 +1,176 @@
+{
+  "vail": [
+    {
+      "triplet": "842:CO:SNTL",
+      "name": "Vail Mountain",
+      "elevFt": 10290,
+      "begin": "1978-10-01 00:00",
+      "km": 1
+    },
+    {
+      "triplet": "1041:CO:SNTL",
+      "name": "Beaver Ck Village",
+      "elevFt": 8530,
+      "begin": "2002-11-01 00:00",
+      "km": 12
+    },
+    {
+      "triplet": "1040:CO:SNTL",
+      "name": "Mccoy Park",
+      "elevFt": 9500,
+      "begin": "2002-10-01 00:00",
+      "km": 15
+    },
+    {
+      "triplet": "802:CO:SNTL",
+      "name": "Summit Ranch",
+      "elevFt": 9350,
+      "begin": "1979-10-01 00:00",
+      "km": 21
+    },
+    {
+      "triplet": "415:CO:SNTL",
+      "name": "Copper Mountain",
+      "elevFt": 10500,
+      "begin": "1978-10-01 00:00",
+      "km": 23
+    },
+    {
+      "triplet": "1120:CO:SNTL",
+      "name": "Elliot Ridge",
+      "elevFt": 10550,
+      "begin": "2009-08-07 00:00",
+      "km": 27
+    },
+    {
+      "triplet": "485:CO:SNTL",
+      "name": "Fremont Pass",
+      "elevFt": 11310,
+      "begin": "1979-10-01 00:00",
+      "km": 31
+    },
+    {
+      "triplet": "1014:CO:SNTL",
+      "name": "Middle Fork Camp",
+      "elevFt": 8960,
+      "begin": "2001-09-19 00:00",
+      "km": 35
+    }
+  ],
+  "steamboat": [
+    {
+      "triplet": "457:CO:SNTL",
+      "name": "Dry Lake",
+      "elevFt": 8240,
+      "begin": "1979-10-01 00:00",
+      "km": 9
+    },
+    {
+      "triplet": "709:CO:SNTL",
+      "name": "Rabbit Ears",
+      "elevFt": 9390,
+      "begin": "1985-10-01 00:00",
+      "km": 11
+    },
+    {
+      "triplet": "825:CO:SNTL",
+      "name": "Tower",
+      "elevFt": 10610,
+      "begin": "1978-10-01 00:00",
+      "km": 13
+    },
+    {
+      "triplet": "408:CO:SNTL",
+      "name": "Columbine",
+      "elevFt": 9170,
+      "begin": "1978-10-01 00:00",
+      "km": 17
+    },
+    {
+      "triplet": "913:CO:SNTL",
+      "name": "Buffalo Park",
+      "elevFt": 9240,
+      "begin": "1995-09-01 00:00",
+      "km": 30
+    },
+    {
+      "triplet": "1030:CO:SNTL",
+      "name": "Arapaho Ridge",
+      "elevFt": 10960,
+      "begin": "2002-08-01 00:00",
+      "km": 36
+    },
+    {
+      "triplet": "426:CO:SNTL",
+      "name": "Crosho",
+      "elevFt": 8960,
+      "begin": "1985-10-01 00:00",
+      "km": 40
+    },
+    {
+      "triplet": "940:CO:SNTL",
+      "name": "Lost Dog",
+      "elevFt": 9350,
+      "begin": "1998-08-01 00:00",
+      "km": 40
+    }
+  ],
+  "whitefish": [
+    {
+      "triplet": "469:MT:SNTL",
+      "name": "Emery Creek",
+      "elevFt": 4340,
+      "begin": "1975-10-01 00:00",
+      "km": 31
+    },
+    {
+      "triplet": "1311:MT:SNTL",
+      "name": "Stryker Basin",
+      "elevFt": 6200,
+      "begin": "2023-09-29 00:00",
+      "km": 31
+    },
+    {
+      "triplet": "510:MT:SNTL",
+      "name": "Hand Creek",
+      "elevFt": 5030,
+      "begin": "1976-10-01 00:00",
+      "km": 41
+    },
+    {
+      "triplet": "664:MT:SNTL",
+      "name": "Noisy Basin",
+      "elevFt": 6070,
+      "begin": "1961-04-01 00:00",
+      "km": 47
+    },
+    {
+      "triplet": "482:MT:SNTL",
+      "name": "Flattop Mtn.",
+      "elevFt": 6280,
+      "begin": "1969-10-01 00:00",
+      "km": 51
+    },
+    {
+      "triplet": "1144:MT:SNTL",
+      "name": "Blacktail Mtn",
+      "elevFt": 5660,
+      "begin": "2010-08-25 00:00",
+      "km": 56
+    },
+    {
+      "triplet": "500:MT:SNTL",
+      "name": "Grave Creek",
+      "elevFt": 4350,
+      "begin": "1968-10-01 00:00",
+      "km": 57
+    },
+    {
+      "triplet": "787:MT:SNTL",
+      "name": "Stahl Peak",
+      "elevFt": 6040,
+      "begin": "1968-10-01 00:00",
+      "km": 60
+    }
+  ]
+}
