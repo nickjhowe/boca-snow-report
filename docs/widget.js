@@ -209,9 +209,11 @@
       week = '<p class="big">' + snow(t.tripForecast.snowCm) + " forecast for your trip dates</p>" +
         '<p class="note">Covers the first ' + t.tripForecast.days + " days of the trip. Forecasts more than a week out often change.</p>";
     } else if (c && c.avgCm != null) {
-      week = '<p class="big">About ' + snow(c.avgCm) + " of new snow in a typical trip week</p>" +
-        '<p class="note">Average for ' + range(t.start, t.end).replace(/, \d{4}$/, "") + " over " + c.years + " (least " + snow(c.minCm) + ", most " + snow(c.maxCm) +
-        "). A real forecast replaces this about two weeks before the trip.</p>";
+      week = '<p class="big">Typically about ' + snow(c.avgCm) + " of new snow during the trip</p>" +
+        '<p class="note">Measured at ' + (o.station || "the nearest station") + " for " + range(t.start, t.end).replace(/, \d{4}$/, "") + " in each season " + c.years +
+        " (least " + snow(c.minCm) + ", most " + snow(c.maxCm) + ")." +
+        (c.medianStartDepthCm != null ? " Typical snow on the ground there when the trip starts: " + depth(c.medianStartDepthCm) + "." : "") +
+        " A real forecast replaces this about two weeks before the trip.</p>";
     } else week = "";
 
     return (
