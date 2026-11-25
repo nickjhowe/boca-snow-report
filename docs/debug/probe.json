@@ -1,0 +1,66 @@
+[
+  {
+    "u": "https://www.vail.com/the-mountain/mountain-conditions/snow-and-weather-report.aspx",
+    "status": 403,
+    "len": 459,
+    "next": null,
+    "base": null,
+    "snowReport": null
+  },
+  {
+    "u": "https://www.onthesnow.com/colorado/vail/skireport",
+    "status": 200,
+    "len": 458138,
+    "next": null,
+    "base": null,
+    "snowReport": null
+  },
+  {
+    "u": "https://www.onthesnow.com/colorado/steamboat/skireport",
+    "status": 200,
+    "len": 455738,
+    "next": null,
+    "base": null,
+    "snowReport": null
+  },
+  {
+    "u": "https://www.onthesnow.com/montana/whitefish-mountain-resort/skireport",
+    "status": 200,
+    "len": 410923,
+    "next": null,
+    "base": null,
+    "snowReport": null
+  },
+  {
+    "u": "https://www.onthesnow.com/japan/hakuba-happo-one/skireport",
+    "status": 404,
+    "len": 46884,
+    "next": null,
+    "base": null,
+    "snowReport": null
+  },
+  {
+    "u": "https://www.onthesnow.com/nagano/hakuba-happo-one/skireport",
+    "status": 404,
+    "len": 46884,
+    "next": null,
+    "base": null,
+    "snowReport": null
+  },
+  {
+    "u": "https://skiwhitefish.com/snowreport/",
+    "status": 200,
+    "len": 354839,
+    "next": null,
+    "base": "ays</span><span class=\"wmr_snow_stat_value\">13\"</span></div> <div class=\"wmr_snow_stat_row\"><span class=\"wmr_snow_stat_label\">Settled Base</span><span class=\"wmr_snow_stat_value\">20\"</span></div> <div class=\"wmr_snow_stat_row\"><span class=\"wmr_snow_stat_label\">Season to Date</span><span class=\"wmr_snow_stat_value\">31\"</span></div> </div> <div class=\"wmr_snow_stat_group\"> <div class=\"wmr_snow_stat_group_header\">Base Area <em class=\"wmr_snow_elevation\">4,464 feet</em></div> ",
+    "snowReport": null
+  },
+  {
+    "u": "https://www.steamboat.com/the-mountain/mountain-report",
+    "status": 200,
+    "len": 74952,
+    "next": null,
+    "base": null,
+    "snowReport": null
+  }
+]
