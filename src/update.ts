@@ -289,6 +289,44 @@ async function jma(t: Trip, stationName: string, label: string) {
   };
 }
 
+// ---------- Resort's own snow report, as published on OnTheSnow ----------
+// The page embeds the resort-reported numbers (cm) in its Next.js data stream, e.g.
+// {\"base\":null,\"middle\":45.72,\"summit\":null,\"last24\":0,\"last48\":5.08,\"last72\":5.08}
+
+async function resortReport(t: Trip) {
+  const res = await fetch(t.onTheSnowUrl, {
+    headers: { "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36", Accept: "text/html" },
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status} for ${t.onTheSnowUrl}`);
+  const html = (await res.text()).replace(/"\]\)<\/script><script>self\.__next_f\.push\(\[1,"/g, ""); // re-join split chunks
+  const N = "(null|-?[\\d.]+)";
+  const q = '\\\\"';
+  const depth = html.match(new RegExp(`\\{${q}base${q}:${N},${q}middle${q}:${N},${q}summit${q}:${N},${q}last24${q}:${N},${q}last48${q}:${N},${q}last72${q}:${N}\\}`));
+  if (!depth) throw new Error("snow data not found on OnTheSnow page");
+  const num = (v: string) => (v === "null" ? null : Number(v));
+  const [base, middle, summit, last24, last48, last72] = depth.slice(1).map(num);
+  const after = html.slice(depth.index!);
+  const counts = [...after.matchAll(new RegExp(`\\{${q}open${q}:${N},(?:${q}openPercent${q}:${N},)?${q}total${q}:${N}`, "g"))].slice(0, 2);
+  const opening = after.match(new RegExp(`${q}openFlag${q}:(\\d+),${q}openingDate${q}:${q}([\\d-]+)${q}`));
+  const history = [...html.matchAll(new RegExp(`\\{${q}date${q}:${q}(\\d{4}-\\d\\d-\\d\\d)${q},${q}snow${q}:${N}\\}`, "g"))]
+    .map((m) => ({ date: m[1], cm: num(m[2]) ?? 0 }));
+  const updated = html.match(/Snow Report Last Updated: ([A-Z][a-z]{2} \d{1,2})/)?.[1] ?? null;
+  const depths = [base, middle, summit].filter((v): v is number => v != null && v > 0);
+  const last7 = history.slice(-7);
+  return {
+    source: "Resort snow report (via OnTheSnow)",
+    updated,
+    depthCm: depths.length ? round1(Math.max(...depths)) : null,
+    baseCm: base, middleCm: middle, summitCm: summit,
+    newSnow24hCm: last24, newSnow48hCm: last48, newSnow72hCm: last72,
+    newSnow7dCm: last7.length ? round1(last7.reduce((a, x) => a + x.cm, 0)) : null,
+    liftsOpen: counts[0] ? num(counts[0][1]) : null, liftsTotal: counts[0] ? num(counts[0][3]) : null,
+    runsOpen: counts[1] ? num(counts[1][1]) : null, runsTotal: counts[1] ? num(counts[1][3]) : null,
+    isOpen: opening ? opening[1] === "1" : null,
+    openingDate: opening?.[2] ?? null,
+  };
+}
+
 // ---------- discovery (debug): nearest SNOTEL sites to each US resort ----------
 
 async function discoverSnotel() {
@@ -327,10 +365,11 @@ async function main() {
   const out = [];
   for (const t of trips) {
     const o = t.observation;
-    const [fc, climo, observed] = await Promise.all([
+    const [fc, climo, observed, resort] = await Promise.all([
       section("forecast", t, () => forecast(t)),
       section("climatology", t, () => (o.kind === "snotel" ? climatologySnotel(t, o.triplet) : climatologyJma(t, o.stationName))),
       section("observed", t, () => (o.kind === "snotel" ? snotel(t, o.triplet, o.label) : jma(t, o.stationName, o.label))),
+      section("resortReport", t, () => resortReport(t)),
     ]);
     // Forecast snowfall that falls within the trip dates, once the trip is in range
     const tripDays = (fc as any)?.days?.filter((d: any) => d.date >= t.start && d.date <= t.end) ?? [];
@@ -338,7 +377,7 @@ async function main() {
       id: t.id, resort: t.resort, region: t.region, start: t.start, end: t.end,
       eventUrl: t.eventUrl, full: t.full, officialReportUrl: t.officialReportUrl,
       elevations: { baseM: t.baseM, midM: t.midM, summitM: t.summitM },
-      observed, forecast: fc, climatology: climo,
+      observed, resortReport: resort, forecast: fc, climatology: climo,
       tripForecast: tripDays.length
         ? { days: tripDays.length, snowCm: round1(tripDays.reduce((a: number, d: any) => a + (d.snowCm ?? 0), 0)) }
         : null,

@@ -34,6 +34,7 @@
 #bsc-snow .where{font-size:16px;color:var(--ink2);margin:6px 0 0}
 #bsc-snow .when{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;margin:10px 0 0}
 #bsc-snow .dates{font-weight:700;font-size:18px}
+#bsc-snow .status{font-weight:700;font-size:15px;color:#1F5F8B}
 #bsc-snow .count{font-family:Archivo,sans-serif;font-stretch:100%;font-weight:700;font-size:16px;background:var(--ink);color:#fff;border-radius:999px;padding:1px 12px}
 
 /* snow stake */
@@ -193,14 +194,21 @@
   function card(t) {
     var o = t.observed || {}, f = t.forecast || {}, c = t.climatology, n = daysUntil(t.start), left = daysUntil(t.end);
     var countdown = n > 1 ? n + " days to go" : n === 1 ? "Tomorrow" : left >= 0 ? "Happening now" : "";
-    var depthCap = o.depthCm == null ? "No reading yet" : o.depthCm === 0 ? "No snow on the ground yet" : "on the ground";
+    var r = t.resortReport || {};
+    var useResort = r.depthCm != null; // resort's own report once the mountain is reporting; station data before that
+    var mainDepth = useResort ? r.depthCm : o.depthCm;
+    var depthCap = useResort ? "base depth, " + r.updated + " report"
+      : o.depthCm == null ? "No reading yet" : o.depthCm === 0 ? "No snow at the station yet" : "natural snow at a nearby station";
+    var status = "";
+    if (r.isOpen && r.liftsOpen != null) status = "Open now: " + r.liftsOpen + " of " + r.liftsTotal + " lifts";
+    else if (r.openingDate && daysUntil(r.openingDate) > 0) status = "Opens " + MON[d(r.openingDate).getMonth()] + " " + d(r.openingDate).getDate();
     var stationLine = o.station
       ? o.station + (o.stationElevM ? ", " + (US() ? Math.round(o.stationElevM / 0.3048).toLocaleString() + " ft" : o.stationElevM + " m") : "") +
         (o.distanceKm != null ? ", " + (US() ? Math.round(o.distanceKm * 0.621) + " mi" : o.distanceKm + " km") + " from the resort" : "")
       : "";
 
-    var newSnow24 = o.newSnow24hCm != null ? o.newSnow24hCm : f.modelSnowLast24hCm;
-    var newSnow7 = o.newSnow7dCm != null ? o.newSnow7dCm : f.modelSnowLast7dCm;
+    var newSnow24 = useResort && r.newSnow24hCm != null ? r.newSnow24hCm : o.newSnow24hCm != null ? o.newSnow24hCm : f.modelSnowLast24hCm;
+    var newSnow7 = useResort && r.newSnow7dCm != null ? r.newSnow7dCm : o.newSnow7dCm != null ? o.newSnow7dCm : f.modelSnowLast7dCm;
 
     var days = (f.days || []).slice(0, 7);
     var sf = function (x) { return x.summitSnowCm != null ? Math.max(x.summitSnowCm, x.snowCm || 0) : x.snowCm; };
@@ -232,14 +240,14 @@
 
     return (
       '<article class="trip" aria-labelledby="bsc-' + t.id + '">' +
-      '<div class="stake">' + stake(o.depthCm) + '<p class="depth">' + depth(o.depthCm) + '</p><p class="cap">' + depthCap + "</p></div>" +
+      '<div class="stake">' + stake(mainDepth) + '<p class="depth">' + depth(mainDepth) + '</p><p class="cap">' + depthCap + "</p></div>" +
       '<div class="content"><h3 class="name" id="bsc-' + t.id + '">' + t.resort + '</h3><p class="where">' + t.region + "</p>" +
-      '<div class="when"><span class="dates">' + range(t.start, t.end) + "</span>" + (countdown ? '<span class="count">' + countdown + "</span>" : "") + "</div></div>" +
+      '<div class="when"><span class="dates">' + range(t.start, t.end) + "</span>" + (countdown ? '<span class="count">' + countdown + "</span>" : "") + (status ? '<span class="status">' + status + "</span>" : "") + "</div></div>" +
       '<div class="rest">' +
       '<ul class="now">' +
       "<li><b>" + snow(newSnow24) + "</b><span>new snow, 24 hours</span></li>" +
       "<li><b>" + snow(newSnow7) + "</b><span>new snow, 7 days</span></li>" +
-      (o.depthChange7dCm > 0 ? "<li><b>" + signed(o.depthChange7dCm) + "</b><span>deeper than a week ago</span></li>" : "") +
+      (!useResort && o.depthChange7dCm > 0 ? "<li><b>" + signed(o.depthChange7dCm) + "</b><span>deeper than a week ago</span></li>" : "") +
       (SHOW_LOW_SNOWPACK || o.pctOfMedian >= 85 ? (o.pctOfMedian != null ? "<li><span>Snowpack</span><br>" + packBadge(o.pctOfMedian) + "</li>" : "") : "") +
       "</ul>" +
       (total7 >= 2.54 ? '<div class="incoming"><svg viewBox="0 0 30 30" aria-hidden="true"><g stroke="#BFDDEE" stroke-width="2.4" stroke-linecap="round"><path d="M15 3v24M4.6 9l20.8 12M4.6 21 25.4 9"/><path d="M11 5l4 3 4-3M11 25l4-3 4 3"/></g></svg><p><b>' + snow(total7) +
@@ -250,7 +258,7 @@
       (week ? '<div class="week">' + week + "</div>" : "") +
       '<div class="actions"><a class="go' + (t.full ? " full" : "") + '" href="' + t.eventUrl + '">' + (t.full ? "View trip (full)" : "Sign up for this trip") + "</a>" +
       '<a class="more" href="' + t.officialReportUrl + '" target="_blank" rel="noopener">Official ' + t.resort + " snow report</a></div>" +
-      '<p class="src">Snow on the ground: ' + stationLine + (o.asOf ? ", reading of " + fmtAsOf(o.asOf) : "") + (o.stale ? " (not updated today)" : "") +
+      '<p class="src">' + (useResort ? "Base depth and new snow: " + t.resort + "'s own report of " + r.updated + " (via OnTheSnow). Station history: " : "Snow on the ground: ") + stationLine + (o.asOf ? ", reading of " + fmtAsOf(o.asOf) : "") + (o.stale ? " (not updated today)" : "") +
       ". Forecast: Open-Meteo" + (f.stale ? " (not updated today)" : "") + ".</p>" +
       "</div></article>"
     );

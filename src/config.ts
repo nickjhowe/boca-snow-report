@@ -16,6 +16,8 @@ export interface Trip {
   /** Set true when registration is at its limit; the button then reads "View trip". */
   full: boolean;
   officialReportUrl: string;
+  /** OnTheSnow skireport page; its embedded data is the resort's own daily report. */
+  onTheSnowUrl: string;
   lat: number;
   lon: number;
   /** Elevations in metres. */
@@ -35,6 +37,7 @@ export const trips: Trip[] = [
     eventUrl: "https://bocaskiclub.com/event-6693377",
     full: true,
     officialReportUrl: "https://www.vail.com/the-mountain/mountain-conditions/snow-and-weather-report.aspx",
+    onTheSnowUrl: "https://www.onthesnow.com/colorado/vail/skireport",
     lat: 39.6205,
     lon: -106.3735,
     baseM: 2475,
@@ -51,6 +54,7 @@ export const trips: Trip[] = [
     eventUrl: "https://bocaskiclub.com/event-6631536",
     full: false,
     officialReportUrl: "https://www.steamboat.com/the-mountain/mountain-report",
+    onTheSnowUrl: "https://www.onthesnow.com/colorado/steamboat/skireport",
     lat: 40.4572,
     lon: -106.7853,
     baseM: 2103,
@@ -67,6 +71,7 @@ export const trips: Trip[] = [
     eventUrl: "https://bocaskiclub.com/event-6685081",
     full: false,
     officialReportUrl: "https://skiwhitefish.com/snowreport/",
+    onTheSnowUrl: "https://www.onthesnow.com/montana/whitefish-mountain-resort/skireport",
     lat: 48.4855,
     lon: -114.3525,
     baseM: 1361,
@@ -83,6 +88,7 @@ export const trips: Trip[] = [
     eventUrl: "https://bocaskiclub.com/event-6686006",
     full: true,
     officialReportUrl: "https://www.hakubavalley.com/en/",
+    onTheSnowUrl: "https://www.onthesnow.com/nagano/hakuba-valley/skireport",
     // Happo-one, the valley's largest resort
     lat: 36.6989,
     lon: 137.8317,
