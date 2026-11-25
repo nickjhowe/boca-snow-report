@@ -331,6 +331,7 @@ async function resortReport(t: Trip) {
     depthCm: depths.length ? round1(Math.max(...depths)) : null,
     baseCm: base, middleCm: middle, summitCm: summit,
     newSnow24hCm: last24, newSnow48hCm: last48, newSnow72hCm: last72,
+    history: history.slice(-10),
     newSnow7dCm: last7.length ? round1(last7.reduce((a, x) => a + x.cm, 0)) : null,
     liftsOpen: counts[0] ? num(counts[0][1]) : null, liftsTotal: counts[0] ? num(counts[0][3]) : null,
     runsOpen: counts[1] ? num(counts[1][1]) : null, runsTotal: counts[1] ? num(counts[1][3]) : null,
