@@ -312,6 +312,7 @@ async function resortReport(t: Trip) {
   const history: { date: string; cm: number }[] = [];
   for (const m of after.matchAll(new RegExp(`\\{${q}date${q}:${q}(\\d{4}-\\d\\d-\\d\\d)${q},${q}snow${q}:${N}\\}`, "g"))) {
     if (history.length && m[1] <= history[history.length - 1].date) break;
+    if (m[1] > isoDate(new Date())) break; // forecast entries follow the history
     history.push({ date: m[1], cm: num(m[2]) ?? 0 });
   }
   const updated = html.match(/Snow Report Last Updated: ([A-Z][a-z]{2} \d{1,2})/)?.[1] ?? null;
@@ -324,7 +325,8 @@ async function resortReport(t: Trip) {
     } catch {}
   }
   const depths = [base, middle, summit, official].filter((v): v is number => v != null && v > 0);
-  const last7 = history.slice(-7);
+  const weekAgo = addDays(isoDate(new Date()), -7);
+  const last7 = history.filter((h) => h.date > weekAgo);
   return {
     source: "Resort snow report (via OnTheSnow)",
     updated,
