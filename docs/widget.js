@@ -207,8 +207,9 @@
         (o.distanceKm != null ? ", " + (US() ? Math.round(o.distanceKm * 0.621) + " mi" : o.distanceKm + " km") + " from the resort" : "")
       : "";
 
-    var newSnow24 = useResort && r.newSnow24hCm != null ? r.newSnow24hCm : o.newSnow24hCm != null ? o.newSnow24hCm : f.modelSnowLast24hCm;
-    var newSnow7 = useResort && r.newSnow7dCm != null ? r.newSnow7dCm : o.newSnow7dCm != null ? o.newSnow7dCm : f.modelSnowLast7dCm;
+    var resortNew = useResort && r.isOpen; // pre-season resort reports don't log new snow, so use the station until opening
+    var newSnow24 = resortNew && r.newSnow24hCm != null ? r.newSnow24hCm : o.newSnow24hCm != null ? o.newSnow24hCm : f.modelSnowLast24hCm;
+    var newSnow7 = resortNew && r.newSnow7dCm != null ? r.newSnow7dCm : o.newSnow7dCm != null ? o.newSnow7dCm : f.modelSnowLast7dCm;
 
     var days = (f.days || []).slice(0, 7);
     var sf = function (x) { return x.summitSnowCm != null ? Math.max(x.summitSnowCm, x.snowCm || 0) : x.snowCm; };
@@ -258,7 +259,7 @@
       (week ? '<div class="week">' + week + "</div>" : "") +
       '<div class="actions"><a class="go' + (t.full ? " full" : "") + '" href="' + t.eventUrl + '">' + (t.full ? "View trip (full)" : "Sign up for this trip") + "</a>" +
       '<a class="more" href="' + t.officialReportUrl + '" target="_blank" rel="noopener">Official ' + t.resort + " snow report</a></div>" +
-      '<p class="src">' + (useResort ? "Base depth and new snow: " + t.resort + "'s own report of " + r.updated + " (via OnTheSnow). Station history: " : "Snow on the ground: ") + stationLine + (o.asOf ? ", reading of " + fmtAsOf(o.asOf) : "") + (o.stale ? " (not updated today)" : "") +
+      '<p class="src">' + (useResort ? "Base depth" + (resortNew ? " and new snow" : "") + ": " + t.resort + "'s own report of " + r.updated + " (via OnTheSnow). " + (resortNew ? "Station history" : "New snow") + ": " : "Snow on the ground: ") + stationLine + (o.asOf ? ", reading of " + fmtAsOf(o.asOf) : "") + (o.stale ? " (not updated today)" : "") +
       ". Forecast: Open-Meteo" + (f.stale ? " (not updated today)" : "") + ".</p>" +
       "</div></article>"
     );
