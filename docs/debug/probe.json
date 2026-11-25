@@ -4,63 +4,111 @@
     "status": 403,
     "len": 459,
     "next": null,
-    "base": null,
-    "snowReport": null
+    "depth": [],
+    "base": [],
+    "summit": [],
+    "hakuba": []
   },
   {
     "u": "https://www.onthesnow.com/colorado/vail/skireport",
     "status": 200,
-    "len": 458138,
+    "len": 458096,
     "next": null,
-    "base": null,
-    "snowReport": null
+    "depth": [
+      "GTfsgID4aZRSyJR_Q\"/><title>Vail Snow Report | OnTheSnow</title><meta name=\"description\" content=\"See latest Vail ski report, updated daily with snow totals &amp; ski conditions. Find out current snow depths and last snowfall date.\"/><link rel=\"manifest\" href=\"/manifest.json\" crossorigin=\"use-credentials\"/><meta name=\"twitter:url\" content=\"https://www.onthesnow.com/colorado/vail/skireport\"/><link rel=\"canonical\" href=\"https://www.onthesnow.com/colorado/vail/skireport\"/><meta property=\"og:title\" c",
+      "erty=\"og:title\" content=\"Vail Snow Report | OnTheSnow\"/><meta property=\"og:description\" content=\"See latest Vail ski report, updated daily with snow totals &amp; ski conditions. Find out current snow depths and last snowfall date.\"/><meta property=\"og:url\" content=\"https://www.onthesnow.com/colorado/vail/skireport\"/><meta property=\"og:locale\" content=\"en-US\"/><meta property=\"og:image\" content=\"https://cdn.bfldr.com/WIENNW6Q/as/4zr73cqbxrxqp6cpjmkfqk5/Vail?auto=webp&amp;format=png\"/><meta propert",
+      "twitter:title\" content=\"Vail Snow Report | OnTheSnow\"/><meta name=\"twitter:description\" content=\"See latest Vail ski report, updated daily with snow totals &amp; ski conditions. Find out current snow depths and last snowfall date.\"/><meta name=\"twitter:image\" content=\"https://cdn.bfldr.com/WIENNW6Q/as/4zr73cqbxrxqp6cpjmkfqk5/Vail?auto=webp&amp;format=png\"/><link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700;900&amp;family=Poppins:wght@100;300",
+      "axed text-muted-foreground\"><span class=\"font-semibold text-foreground\">Snow Report Last Updated: Nov 25.</span> <!-- -->Before putting on your skis, check the snow conditions at Vail one last time. Depth and quality of the snow, date of the last snowfall, today&#x27;s weather, temperature, wind... all the information you are looking for to have a great day of skiing. Please note Vail snow reports are sourced directly from the ski resort and are only recorded during the official ski season&#x27"
+    ],
+    "base": [
+      "\":\\\"snow/USA_Rock/CO\\\",\\\"state\\\":\\\"CO\\\",\\\"domain\\\":null,\\\"isLogical\\\":false,\\\"countryUuid\\\":\\\"429\\\",\\\"continentUuid\\\":\\\"477\\\",\\\"stateUuid\\\":\\\"251\\\"}\\n27:{\\\"url\\\":\\\"\\\",\\\"title\\\":\\\"Vail Resorts\\\"}\\n28:{\\\"base\\\":null,\\\"middle\\\":45.72,\\\"summit\\\":null,\\\"last24\\\":0,\\\"last48\\\":5.08,\\\"last72\\\":5.08}\\n29:{\\\"open\\\":5,\\\"total\\\":33,\\\"details\\\":null}\\n2a:{\\\"open\\\":6,\\\"openPercent\\\":2,\\\"total\\\":277,\\\"details\\\":null}\\n2b:{\\\"openFlag\\\":1,\\\"openingDate\\\":\\\"2026-11-13\\\",\\\"closingDate\\\":\\\"2027-04-11\\\"}\\n2d:{\\\"min\\",
+      "\\\":\\\"2026-11-13\\\",\\\"closingDate\\\":\\\"2027-04-11\\\"}\\n2d:{\\\"min\\\":-6.7,\\\"max\\\":7.1}\\n2e:{\\\"min\\\":-10.7,\\\"max\\\":1.1}\\n2f:{\\\"min\\\":-10.8,\\\"max\\\":1}\\n2c:{\\\"date\\\":\\\"2026-11-25\\\",\\\"wind\\\":3.94583,\\\"snow\\\":0,\\\"base\\\":\\\"$2d\\\",\\\"mid\\\":\\\"$2e\\\",\\\"summit\\\":\\\"$2f\\\",\\\"type\\\":\\\"SUN\\\"}\\n31:{\\\"open\\\":6,\\\"openPercent\\\":2,\\\"total\\\":277,\\\"details\\\":null}\\n32:{\\\"openNum\\\":3,\\\"openLen\\\":null,\\\"openPercent\\\":13,\\\"totalLen\\\":0,\\\"total\\\":62,\\\"totalPercent\\\":23}\\n33:{\\\"openNum\\\":3,\\\"openLen\\\":null,\\\"openPercent\\\":2,\\\"tota",
+      "runsAdvanced\\\":\\\"$34\\\",\\\"runsExpert\\\":\\\"$35\\\",\\\"acres\\\":\\\"$36\\\",\\\"km\\\":\\\"$37\\\",\\\"parks\\\":\\\"$38\\\",\\\"pipes\\\":\\\"$39\\\",\\\"tubes\\\":\\\"$3a\\\",\\\"nordic\\\":\\\"$3b\\\",\\\"canReturnBySki\\\":null,\\\"lifts\\\":\\\"$3c\\\"}\\n3d:{\\\"base\\\":null,\\\"middle\\\":45.72,\\\"summit\\\":null}\\n3f:{\\\"date\\\":\\\"2026-11-18\\\",\\\"snow\\\":5.08}\\n40:{\\\"date\\\":\\\"2026-11-19\\\",\\\"snow\\\":0}\\n41:{\\\"date\\\":\\\"2026-11-20\\\",\\\"snow\\\":2.54}\\n42:{\\\"date\\\":\\\"2026-11-21\\\",\\\"snow\\\":17.78}\\n43:{\\\"date\\\":\\\"2026-11-22\\\",\\\"snow\\\":2.54}\\n44:{\\\"date\\\":\\\"2026-11-23\\\",\\\"sno",
+      "owfall\\\":0,\\\"isForecast\\\":true,\\\"type\\\":\\\"CLOUDY\\\",\\\"wind\\\":\\\"$80\\\"}\\n62:[\\\"$63\\\",\\\"$65\\\",\\\"$67\\\",\\\"$69\\\",\\\"$6b\\\",\\\"$6d\\\",\\\"$6f\\\",\\\"$71\\\",\\\"$73\\\",\\\"$75\\\",\\\"$77\\\",\\\"$79\\\",\\\"$7b\\\",\\\"$7d\\\",\\\"$7f\\\"]\\n81:{\\\"base\\\":48,\\\"middle\\\":51,\\\"summit\\\":45}\\n25:{\\\"uuid\\\":\\\"482\\\",\\\"title\\\":\\\"Vail\\\",\\\"slug\\\":\\\"vail\\\",\\\"corporateName\\\":\\\"VAIL RESORT\\\",\\\"latitude\\\":39.643004729,\\\"longitude\\\":-106.378457112,\\\"physicalAddress\\\":\\\"450 E. Lionshead Circle\\\",\\\"physicalCity\\\":\\\"Vail\\\",\\\"zip\\\":\\\"81658\\\",\\\"timezone\\\":-7,\\\"r"
+    ],
+    "summit": [
+      "03e\\u003cbr /\\u003eNatural features across the mountain include ridgelines, cliff bands, and glades. The resort\\u0026rsquo;s elevation\\u0026mdash;ranging from 8,120 ft at the base to 11,570 ft at the summit\\u0026mdash;ensures consistent snow quality. Snowmaking is available across key areas, and the lift system includes high-speed sixes, quads, gondolas, and surface lifts for efficient access.\\u003cbr /\\u003e\\u003cbr /\\u003eFor beginners, areas near Gopher Hill and Sourdough Express offer wide, ",
+      "\\\"CO\\\",\\\"domain\\\":null,\\\"isLogical\\\":false,\\\"countryUuid\\\":\\\"429\\\",\\\"continentUuid\\\":\\\"477\\\",\\\"stateUuid\\\":\\\"251\\\"}\\n27:{\\\"url\\\":\\\"\\\",\\\"title\\\":\\\"Vail Resorts\\\"}\\n28:{\\\"base\\\":null,\\\"middle\\\":45.72,\\\"summit\\\":null,\\\"last24\\\":0,\\\"last48\\\":5.08,\\\"last72\\\":5.08}\\n29:{\\\"open\\\":5,\\\"total\\\":33,\\\"details\\\":null}\\n2a:{\\\"open\\\":6,\\\"openPercent\\\":2,\\\"total\\\":277,\\\"details\\\":null}\\n2b:{\\\"openFlag\\\":1,\\\"openingDate\\\":\\\"2026-11-13\\\",\\\"closingDate\\\":\\\"2027-04-11\\\"}\\n2d:{\\\"min\\\":-6.7,\\\"max\\\":7.1}\\n2e:{\\\"min\\\":"
+    ],
+    "hakuba": []
   },
   {
     "u": "https://www.onthesnow.com/colorado/steamboat/skireport",
     "status": 200,
-    "len": 455738,
+    "len": 455782,
     "next": null,
-    "base": null,
-    "snowReport": null
+    "depth": [
+      "RSyJR_Q\"/><title>Steamboat Snow Report | OnTheSnow</title><meta name=\"description\" content=\"See latest Steamboat ski report, updated daily with snow totals &amp; ski conditions. Find out current snow depths and last snowfall date.\"/><link rel=\"manifest\" href=\"/manifest.json\" crossorigin=\"use-credentials\"/><meta name=\"twitter:url\" content=\"https://www.onthesnow.com/colorado/steamboat/skireport\"/><link rel=\"canonical\" href=\"https://www.onthesnow.com/colorado/steamboat/skireport\"/><meta property=\"o",
+      "itle\" content=\"Steamboat Snow Report | OnTheSnow\"/><meta property=\"og:description\" content=\"See latest Steamboat ski report, updated daily with snow totals &amp; ski conditions. Find out current snow depths and last snowfall date.\"/><meta property=\"og:url\" content=\"https://www.onthesnow.com/colorado/steamboat/skireport\"/><meta property=\"og:locale\" content=\"en-US\"/><meta property=\"og:image\" content=\"https://cdn.bfldr.com/WIENNW6Q/as/mbngr84vfxhzt42gg8rtknbh/Steamboat?auto=webp&amp;format=png\"/><m",
+      "tle\" content=\"Steamboat Snow Report | OnTheSnow\"/><meta name=\"twitter:description\" content=\"See latest Steamboat ski report, updated daily with snow totals &amp; ski conditions. Find out current snow depths and last snowfall date.\"/><meta name=\"twitter:image\" content=\"https://cdn.bfldr.com/WIENNW6Q/as/mbngr84vfxhzt42gg8rtknbh/Steamboat?auto=webp&amp;format=png\"/><link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700;900&amp;family=Poppins:wght@1",
+      "text-muted-foreground\"><span class=\"font-semibold text-foreground\">Snow Report Last Updated: Nov 24.</span> <!-- -->Before putting on your skis, check the snow conditions at Steamboat one last time. Depth and quality of the snow, date of the last snowfall, today&#x27;s weather, temperature, wind... all the information you are looking for to have a great day of skiing. Please note Steamboat snow reports are sourced directly from the ski resort and are only recorded during the official ski season"
+    ],
+    "base": [
+      "\":\\\"snow/USA_Rock/CO\\\",\\\"state\\\":\\\"CO\\\",\\\"domain\\\":null,\\\"isLogical\\\":false,\\\"countryUuid\\\":\\\"429\\\",\\\"continentUuid\\\":\\\"477\\\",\\\"stateUuid\\\":\\\"251\\\"}\\n28:{\\\"url\\\":\\\"\\\",\\\"title\\\":\\\"Shutterstock\\\"}\\n29:{\\\"base\\\":null,\\\"middle\\\":null,\\\"summit\\\":null,\\\"last24\\\":0,\\\"last48\\\":0,\\\"last72\\\":0}\\n2a:{\\\"open\\\":0,\\\"total\\\":23,\\\"details\\\":null}\\n2b:{\\\"open\\\":0,\\\"openPercent\\\":0,\\\"total\\\":184,\\\"details\\\":null}\\n2c:{\\\"openFlag\\\":2,\\\"openingDate\\\":\\\"2026-11-27\\\",\\\"closingDate\\\":\\\"2027-04-04\\\"}\\n2e:{\\\"min\\\":-7.5,",
+      "te\\\":\\\"2026-11-27\\\",\\\"closingDate\\\":\\\"2027-04-04\\\"}\\n2e:{\\\"min\\\":-7.5,\\\"max\\\":6.8}\\n2f:{\\\"min\\\":-7.8,\\\"max\\\":3}\\n30:{\\\"min\\\":-9.9,\\\"max\\\":0.4}\\n2d:{\\\"date\\\":\\\"2026-11-25\\\",\\\"wind\\\":5.24167,\\\"snow\\\":0,\\\"base\\\":\\\"$2e\\\",\\\"mid\\\":\\\"$2f\\\",\\\"summit\\\":\\\"$30\\\",\\\"type\\\":\\\"MOSTLY_SUNNY\\\"}\\n32:{\\\"open\\\":0,\\\"openPercent\\\":0,\\\"total\\\":184,\\\"details\\\":null}\\n33:{\\\"openNum\\\":0,\\\"openLen\\\":null\"])</script><script>self.__next_f.push([1,\",\\\"openPercent\\\":0,\\\"totalLen\\\":0,\\\"total\\\":22,\\\"totalPercent\\\":12}\\n34:{\\\"op",
+      "runsAdvanced\\\":\\\"$35\\\",\\\"runsExpert\\\":\\\"$36\\\",\\\"acres\\\":\\\"$37\\\",\\\"km\\\":\\\"$38\\\",\\\"parks\\\":\\\"$39\\\",\\\"pipes\\\":\\\"$3a\\\",\\\"tubes\\\":\\\"$3b\\\",\\\"nordic\\\":\\\"$3c\\\",\\\"canReturnBySki\\\":null,\\\"lifts\\\":\\\"$3d\\\"}\\n3e:{\\\"base\\\":null,\\\"middle\\\":null,\\\"summit\\\":null}\\n40:{\\\"date\\\":\\\"2026-11-17\\\",\\\"snow\\\":0}\\n41:{\\\"date\\\":\\\"2026-11-18\\\",\\\"snow\\\":0}\\n42:{\\\"date\\\":\\\"2026-11-19\\\",\\\"snow\\\":0}\\n43:{\\\"date\\\":\\\"2026-11-20\\\",\\\"snow\\\":0}\\n44:{\\\"date\\\":\\\"2026-11-21\\\",\\\"snow\\\":0}\\n45:{\\\"date\\\":\\\"2026-11-22\\\",\\\"snow\\\":0}\\n46:{\\\"",
+      "wfall\\\":1.21,\\\"isForecast\\\":true,\\\"type\\\":\\\"SNOW\\\",\\\"wind\\\":\\\"$85\\\"}\\n67:[\\\"$68\\\",\\\"$6a\\\",\\\"$6c\\\",\\\"$6e\\\",\\\"$70\\\",\\\"$72\\\",\\\"$74\\\",\\\"$76\\\",\\\"$78\\\",\\\"$7a\\\",\\\"$7c\\\",\\\"$7e\\\",\\\"$80\\\",\\\"$82\\\",\\\"$84\\\"]\\n86:{\\\"base\\\":38,\\\"middle\\\":37,\\\"summit\\\":41}\\n26:{\\\"uuid\\\":\\\"425\\\",\\\"title\\\":\\\"Steamboat\\\",\\\"slug\\\":\\\"steamboat\\\",\\\"corporateName\\\":\\\"STEAMBO\"])</script><script>self.__next_f.push([1,\"AT SKI \\u0026 RESORT CORP.\\\",\\\"latitude\\\":40.465524291,\\\"longitude\\\":-106.786822739,\\\"physicalAddress\\\":\\\"2305 Mt. Werne"
+    ],
+    "summit": [
+      "al drop of 3666 ft, making it one of the largest in the state. Annual snowfall averages 292 inches, supported by extensive snowmaking across key areas. The base elevation sits at 6900 ft, rising to a summit of 10566 ft.The mountain features 184 trails served by 23 lifts, including gondolas, high-speed sixes, and surface lifts. Trail difficulty is well distributed: 12% beginner, 38% intermediate, 41% advanced, and 9% expert. Families will appreciate the dedicated learning zones like Greenhorn Ran",
+      "rgest in the state. Annual snowfall averages 292 inches, supported by extensive snowmaking across key areas. The base elevation sits at 6\"])</script><script>self.__next_f.push([1,\"900 ft, rising to a summit of 10566 ft.\\u003cbr /\\u003e\\u003cbr /\\u003eThe mountain features 184 trails served by 23 lifts, including gondolas, high-speed sixes, and surface lifts. Trail difficulty is well distributed: 12% beginner, 38% intermediate, 41% advanced, and 9% expert. Families will appreciate the dedicated l"
+    ],
+    "hakuba": []
   },
   {
     "u": "https://www.onthesnow.com/montana/whitefish-mountain-resort/skireport",
     "status": 200,
     "len": 410923,
     "next": null,
-    "base": null,
-    "snowReport": null
+    "depth": [
+      "ain Resort Snow Report | OnTheSnow</title><meta name=\"description\" content=\"See latest Whitefish Mountain Resort ski report, updated daily with snow totals &amp; ski conditions. Find out current snow depths and last snowfall date.\"/><link rel=\"manifest\" href=\"/manifest.json\" crossorigin=\"use-credentials\"/><meta name=\"twitter:url\" content=\"https://www.onthesnow.com/montana/whitefish-mountain-resort/skireport\"/><link rel=\"canonical\" href=\"https://www.onthesnow.com/montana/whitefish-mountain-resort",
+      "n Resort Snow Report | OnTheSnow\"/><meta property=\"og:description\" content=\"See latest Whitefish Mountain Resort ski report, updated daily with snow totals &amp; ski conditions. Find out current snow depths and last snowfall date.\"/><meta property=\"og:url\" content=\"https://www.onthesnow.com/montana/whitefish-mountain-resort/skireport\"/><meta property=\"og:locale\" content=\"en-US\"/><meta property=\"og:image\" content=\"https://cdn.bfldr.com/WIENNW6Q/as/jh9ht876cbfpc4v6vqksxjm/Whitefish_Mountain_Resort",
+      " Resort Snow Report | OnTheSnow\"/><meta name=\"twitter:description\" content=\"See latest Whitefish Mountain Resort ski report, updated daily with snow totals &amp; ski conditions. Find out current snow depths and last snowfall date.\"/><meta name=\"twitter:image\" content=\"https://cdn.bfldr.com/WIENNW6Q/as/jh9ht876cbfpc4v6vqksxjm/Whitefish_Mountain_Resort?auto=webp&amp;format=png\"/><link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700;900&amp;family",
+      "round\"><span class=\"font-semibold text-foreground\">Snow Report Last Updated: Nov 20.</span> <!-- -->Before putting on your skis, check the snow conditions at Whitefish Mountain Resort one last time. Depth and quality of the snow, date of the last snowfall, today&#x27;s weather, temperature, wind... all the information you are looking for to have a great day of skiing. Please note Whitefish Mountain Resort snow reports are sourced directly from the ski resort and are only recorded during the off"
+    ],
+    "base": [
+      "Rock/MT\\\",\\\"state\\\":\\\"MT\\\",\\\"domain\\\":null,\\\"isLogical\\\":false,\\\"countryUuid\\\":\\\"429\\\",\\\"continentUuid\\\":\\\"477\\\",\\\"stateUuid\\\":\\\"199\\\"}\\n22:{\\\"url\\\":\\\"\\\",\\\"title\\\":\\\"Whitefish Mountain Resort\\\"}\\n23:{\\\"base\\\":null,\\\"middle\\\":40.64,\\\"summit\\\":null,\\\"last24\\\":0,\\\"last48\\\":0,\\\"last72\\\":0}\\n24:{\\\"open\\\":0,\\\"total\\\":14,\\\"details\\\":null}\\n25:{\\\"open\\\":0,\\\"openPercent\\\":0,\\\"total\\\":111,\\\"details\\\":null}\\n26:{\\\"openFlag\\\":2,\\\"openingDate\\\":\\\"2026-12-04\\\",\\\"closingDate\\\":\\\"2027-04-04\\\"}\\n28:{\\\"min\\\":-1.8",
+      "e\\\":\\\"2026-12-04\\\",\\\"closingDate\\\":\\\"2027-04-04\\\"}\\n28:{\\\"min\\\":-1.8,\\\"max\\\":3.9}\\n29:{\\\"min\\\":-3.7,\\\"max\\\":0}\\n2a:{\\\"min\\\":-5.4,\\\"max\\\":-1.7}\\n27:{\\\"date\\\":\\\"2026-11-25\\\",\\\"wind\\\":2.80417,\\\"snow\\\":0,\\\"base\\\":\\\"$28\\\",\\\"mid\\\":\\\"$29\\\",\\\"summit\\\":\\\"$2a\\\",\\\"type\\\":\\\"FOG\\\"}\\n2c:{\\\"open\\\":0,\\\"openPercent\\\":0,\\\"total\\\":111,\\\"details\\\":null}\\n2d:{\\\"openNum\\\":null,\\\"openLen\\\":null,\\\"openPercent\\\":null,\\\"totalLen\\\":0,\\\"total\\\":0,\\\"totalPercent\\\":0}\\n2e:{\\\"openNum\\\":null,\\\"openLen\\\":null,\\\"openPercent\\\":nu",
+      "\\\",\\\"acres\\\":\\\"$31\\\",\\\"km\\\":\\\"$32\\\",\\\"parks\\\":\\\"$33\\\",\\\"pipes\\\":\\\"$34\\\",\\\"tubes\\\":\\\"$35\\\",\\\"nordic\\\":\\\"$36\\\",\\\"canReturnBySki\\\":null,\\\"lifts\\\":\\\"$37\"])</script><script>self.__next_f.push([1,\"\\\"}\\n38:{\\\"base\\\":null,\\\"middle\\\":40.64,\\\"summit\\\":null}\\n3a:{\\\"date\\\":\\\"2026-11-13\\\",\\\"snow\\\":0}\\n3b:{\\\"date\\\":\\\"2026-11-14\\\",\\\"snow\\\":0}\\n3c:{\\\"date\\\":\\\"2026-11-15\\\",\\\"snow\\\":0}\\n3d:{\\\"date\\\":\\\"2026-11-16\\\",\\\"snow\\\":15.24}\\n3e:{\\\"date\\\":\\\"2026-11-17\\\",\\\"snow\\\":10.16}\\n3f:{\\\"date\\\":\\\"2026-11-18\\\",\\\"snow\\\":0",
+      "\"SNOW\\\",\\\"wind\\\":\\\"$7b\\\"}\\n5d:[\\\"$5e\\\",\\\"$60\\\",\\\"$62\\\",\\\"$64\\\",\\\"$66\\\",\\\"$68\\\",\\\"$6a\\\",\\\"$\"])</script><script>self.__next_f.push([1,\"6c\\\",\\\"$6e\\\",\\\"$70\\\",\\\"$72\\\",\\\"$74\\\",\\\"$76\\\",\\\"$78\\\",\\\"$7a\\\"]\\n7c:{\\\"base\\\":15,\\\"middle\\\":0,\\\"summit\\\":15}\\n20:{\\\"uuid\\\":\\\"46\\\",\\\"title\\\":\\\"Whitefish Mountain Resort\\\",\\\"slug\\\":\\\"whitefish-mountain-resort\\\",\\\"corporateName\\\":\\\"Whitefish Mountain Resort\\\",\\\"latitude\\\":48.480576,\\\"longitude\\\":-114.350106,\\\"physicalAddress\\\":\\\"3808 Big Mountain Road\\\",\\\"physicalCity\\\""
+    ],
+    "summit": [
+      "ntain-resort/webcams\"><div class=\"relative overflow-hidden rounded-md bg-muted aspect-[4/3]\"><img src=\"https://ots-webcams.s3.amazonaws.com/46/21069/2026-11-25_2003/xl.jpg\" alt=\"Whitefish - Whitefish Summit\" loading=\"lazy\" decoding=\"async\" class=\"absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]\"/><span class=\"absolute bottom-3 right-3 rounded bg-black/65 px-2 py-0.5 text-xs font-medium text-white\">12 minutes ago</span></div><div class=\"mt-2\"><div class",
+      " px-2 py-0.5 text-xs font-medium text-white\">12 minutes ago</span></div><div class=\"mt-2\"><div class=\"text-base font-bold leading-tight text-foreground group-hover:text-primary\">Whitefish - Whitefish Summit</div></div></a></section></div><section><div class=\"mb-2.5 flex items-baseline justify-between gap-3\"><h3 class=\"font-semibold tracking-tight text-secondary md:text-xl font-heading text-lg\">Resort Overview</h3><a class=\"shrink-0 text-sm font-semibold text-primary hover:underline\" data-click-i"
+    ],
+    "hakuba": []
   },
   {
-    "u": "https://www.onthesnow.com/japan/hakuba-happo-one/skireport",
-    "status": 404,
-    "len": 46884,
-    "next": null,
-    "base": null,
-    "snowReport": null
-  },
-  {
-    "u": "https://www.onthesnow.com/nagano/hakuba-happo-one/skireport",
-    "status": 404,
-    "len": 46884,
-    "next": null,
-    "base": null,
-    "snowReport": null
-  },
-  {
-    "u": "https://skiwhitefish.com/snowreport/",
+    "u": "https://www.onthesnow.com/japan/ski-resorts",
     "status": 200,
-    "len": 354839,
+    "len": 241586,
     "next": null,
-    "base": "ays</span><span class=\"wmr_snow_stat_value\">13\"</span></div> <div class=\"wmr_snow_stat_row\"><span class=\"wmr_snow_stat_label\">Settled Base</span><span class=\"wmr_snow_stat_value\">20\"</span></div> <div class=\"wmr_snow_stat_row\"><span class=\"wmr_snow_stat_label\">Season to Date</span><span class=\"wmr_snow_stat_value\">31\"</span></div> </div> <div class=\"wmr_snow_stat_group\"> <div class=\"wmr_snow_stat_group_header\">Base Area <em class=\"wmr_snow_elevation\">4,464 feet</em></div> ",
-    "snowReport": null
+    "depth": [
+      "mage\\\":\\\"https://ots-webcams.s3.amazonaws.com/3789/25537/2026-11-25_0634/xl.jpg\\\",\\\"thumbnail\\\":\\\"https://ots-webcams.s3.amazonaws.com/3789/25537/2026-11-25_0634/la.jpg\\\",\\\"snow\\\":\\\"$1e\\\",\\\"summitSnowDepth\\\":null,\\\"isFeatured\\\":true,\\\"videoStream\\\":null,\\\"webcamType\\\":0,\\\"sort\\\":1}\\n1a:{\\\"uuid\\\":\\\"3789\\\",\\\"title\\\":\\\"Kiroro\\\",\\\"region\\\":\\\"$1b\\\",\\\"image\\\":\\\"https://cdn.bfldr.com/WIENNW6Q/as/cbfwbvv4cmxhcmx4b9zrcxw/Kiroro?auto=webp\\u0026format=png\\\",\\\"smallImage\\\":\\\"https://cdn.bfldr.com/WIENNW6Q/a",
+      "3.amazonaws.com/3789/25537/2026-11-25_0634/xl.jpg\\\",\\\"thumbnail\\\":\\\"https://ots-webcams.s3.amazonaws.com/3789/25537/2026-11-25_0634/la.jpg\\\",\\\"snow\\\":{\\\"date\\\":\\\"2026-11-25\\\",\\\"snow\\\":15},\\\"summitSnowDepth\\\":null,\\\"isFeatured\\\":true,\\\"videoStream\\\":null,\\\"webcamType\\\":0,\\\"sort\\\":1}}},\\\"featuredResortByIndex\\\":null,\\\"topRatedByCategory\\\":{\\\"overall\\\":[],\\\"allMtnTerrain\\\":[],\\\"expert\\\":[],\\\"terrainPark\\\":[],\\\"beginner\\\":[],\\\"familyFriendly\\\":[],\\\"apresSki\\\":[]},\\\"regionResortListGuide\\\":[{\\\"uuid\\\""
+    ],
+    "base": [],
+    "summit": [
+      "0:00\\\",\\\"image\\\":\\\"https://ots-webcams.s3.amazonaws.com/3789/25537/2026-11-25_0634/xl.jpg\\\",\\\"thumbnail\\\":\\\"https://ots-webcams.s3.amazonaws.com/3789/25537/2026-11-25_0634/la.jpg\\\",\\\"snow\\\":\\\"$1e\\\",\\\"summitSnowDepth\\\":null,\\\"isFeatured\\\":true,\\\"videoStream\\\":null,\\\"webcamType\\\":0,\\\"sort\\\":1}\\n1a:{\\\"uuid\\\":\\\"3789\\\",\\\"title\\\":\\\"Kiroro\\\",\\\"region\\\":\\\"$1b\\\",\\\"image\\\":\\\"https://cdn.bfldr.com/WIENNW6Q/as/cbfwbvv4cmxhcmx4b9zrcxw/Kiroro?auto=webp\\u0026format=png\\\",\\\"smallImage\\\":\\\"https://cdn.bfldr.com/",
+      "-webcams.s3.amazonaws.com/3789/25537/2026-11-25_0634/xl.jpg\\\",\\\"thumbnail\\\":\\\"https://ots-webcams.s3.amazonaws.com/3789/25537/2026-11-25_0634/la.jpg\\\",\\\"snow\\\":{\\\"date\\\":\\\"2026-11-25\\\",\\\"snow\\\":15},\\\"summitSnowDepth\\\":null,\\\"isFeatured\\\":true,\\\"videoStream\\\":null,\\\"webcamType\\\":0,\\\"sort\\\":1}}},\\\"featuredResortByIndex\\\":null,\\\"topRatedByCategory\\\":{\\\"overall\\\":[],\\\"allMtnTerrain\\\":[],\\\"expert\\\":[],\\\"terrainPark\\\":[],\\\"beginner\\\":[],\\\"familyFriendly\\\":[],\\\"apresSki\\\":[]},\\\"regionResortListGuide\\\":"
+    ],
+    "hakuba": [
+      "oreground\">, Hokkaido</span></th></tr><tr class=\"bg-background\"><th scope=\"row\" class=\"px-4 py-3.5 font-semibold text-foreground text-left\"><a class=\"hover:text-primary hover:underline\" href=\"/nagano/hakuba-valley/ski-resort\">Hakuba Valley</a><span class=\"font-normal text-muted-foreground\">, Nagano</span></th></tr><tr class=\"bg-sky-50/50\"><th scope=\"row\" class=\"px-4 py-3.5 font-semibold text-foreground text-left\"><a class=\"hover:text-primary hover:underline\" href=\"/hokkaido/kiroro/ski-resort\">Ki",
+      "n></th></tr><tr class=\"bg-background\"><th scope=\"row\" class=\"px-4 py-3.5 font-semibold text-foreground text-left\"><a class=\"hover:text-primary hover:underline\" href=\"/nagano/hakuba-valley/ski-resort\">Hakuba Valley</a><span class=\"font-normal text-muted-foreground\">, Nagano</span></th></tr><tr class=\"bg-sky-50/50\"><th scope=\"row\" class=\"px-4 py-3.5 font-semibold text-foreground text-left\"><a class=\"hover:text-primary hover:underline\" href=\"/hokkaido/kiroro/ski-resort\">Kiroro</a><span class=\"font-",
+      "=\"noopener noreferrer nofollow\" href=\"https://www.onthesnow.com/hokkaido/kiroro/ski-resort\">Kiroro</a> and <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.onthesnow.com/nagano/hakuba-valley/ski-resort\">Hakuba Valley</a>. For powder hounds, this means face shots, tree runs, and backcountry bliss. The consistency and quality of snow make Japan powder snow resorts a bucket-list destination.</p><h4> Resort scale, layout, and services</h4><p> Japanese ski resorts vary in",
+      "llow\" href=\"https://www.onthesnow.com/hokkaido/kiroro/ski-resort\">Kiroro</a> and <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.onthesnow.com/nagano/hakuba-valley/ski-resort\">Hakuba Valley</a>. For powder hounds, this means face shots, tree runs, and backcountry bliss. The consistency and quality of snow make Japan powder snow resorts a bucket-list destination.</p><h4> Resort scale, layout, and services</h4><p> Japanese ski resorts vary in size, but many are interc",
+      " its warm hospitality, local cuisine, and easy access to soothing hot springs—making it an ideal destination for skiing and onsen in Japan.</p><h4> Nagano & Niigata | The Japanese Alps</h4><h5> Hakuba Valley | Olympic legacy and terrain diversity</h5><p> <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.onthesnow.com/nagano/hakuba-valley/ski-resort\">Hakuba Valley</a> stands as one of Japan’s most iconic and dynamic ski destinations with its diverse slopes, dramatic",
+      " & Niigata | The Japanese Alps</h4><h5> Hakuba Valley | Olympic legacy and terrain diversity</h5><p> <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.onthesnow.com/nagano/hakuba-valley/ski-resort\">Hakuba Valley</a> stands as one of Japan’s most iconic and dynamic ski destinations with its diverse slopes, dramatic scenery, and a legacy rooted in the Winter Olympics. It offers a vast valley of interconnected resorts, epic backcountry terrain, and panoramic alpine views"
+    ]
   },
   {
     "u": "https://www.steamboat.com/the-mountain/mountain-report",
     "status": 200,
-    "len": 74952,
+    "len": 74953,
     "next": null,
-    "base": null,
-    "snowReport": null
+    "depth": [],
+    "base": [],
+    "summit": [],
+    "hakuba": []
   }
 ]
