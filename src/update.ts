@@ -308,10 +308,22 @@ async function resortReport(t: Trip) {
   const after = html.slice(depth.index!);
   const counts = [...after.matchAll(new RegExp(`\\{${q}open${q}:${N},(?:${q}openPercent${q}:${N},)?${q}total${q}:${N}`, "g"))].slice(0, 2);
   const opening = after.match(new RegExp(`${q}openFlag${q}:(\\d+),${q}openingDate${q}:${q}([\\d-]+)${q}`));
-  const history = [...html.matchAll(new RegExp(`\\{${q}date${q}:${q}(\\d{4}-\\d\\d-\\d\\d)${q},${q}snow${q}:${N}\\}`, "g"))]
-    .map((m) => ({ date: m[1], cm: num(m[2]) ?? 0 }));
+  // The resort's daily snowfall history is the first run of {date, snow} entries after the depth block
+  const history: { date: string; cm: number }[] = [];
+  for (const m of after.matchAll(new RegExp(`\\{${q}date${q}:${q}(\\d{4}-\\d\\d-\\d\\d)${q},${q}snow${q}:${N}\\}`, "g"))) {
+    if (history.length && m[1] <= history[history.length - 1].date) break;
+    history.push({ date: m[1], cm: num(m[2]) ?? 0 });
+  }
   const updated = html.match(/Snow Report Last Updated: ([A-Z][a-z]{2} \d{1,2})/)?.[1] ?? null;
-  const depths = [base, middle, summit].filter((v): v is number => v != null && v > 0);
+  let official: number | null = null;
+  if (t.id === "whitefish") {
+    try {
+      const w = await getText("https://skiwhitefish.com/snowreport/");
+      const m = w.match(/Settled Base<\/span>\s*<span class="wmr_snow_stat_value">(\d+)"/);
+      if (m) official = Number(m[1]) * IN_TO_CM;
+    } catch {}
+  }
+  const depths = [base, middle, summit, official].filter((v): v is number => v != null && v > 0);
   const last7 = history.slice(-7);
   return {
     source: "Resort snow report (via OnTheSnow)",
