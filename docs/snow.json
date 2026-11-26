@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T20:23:44.788Z",
+  "generatedAt": "2026-11-26T19:43:10.446Z",
   "trips": [
     {
       "id": "vail",
@@ -20,31 +20,27 @@
         "station": "Vail Mountain SNOTEL",
         "stationElevM": 3136,
         "distanceKm": 1,
-        "asOf": "2026-11-24",
-        "depthCm": 10.2,
-        "depthChange24hCm": 0,
+        "asOf": "2026-11-25",
+        "depthCm": 7.6,
+        "depthChange24hCm": -2.5,
         "depthChange7dCm": 7.6,
         "newSnow24hCm": 0,
         "newSnow7dCm": 12.7,
         "sweMm": 25.4,
-        "pctOfMedian": 28,
+        "pctOfMedian": 26,
         "stale": false
       },
       "resortReport": {
         "source": "Resort snow report (via OnTheSnow)",
-        "updated": "Nov 25",
+        "updated": "Nov 26",
         "depthCm": 45.7,
         "baseCm": null,
         "middleCm": 45.72,
         "summitCm": null,
         "newSnow24hCm": 0,
-        "newSnow48hCm": 5.08,
+        "newSnow48hCm": 0,
         "newSnow72hCm": 5.08,
         "history": [
-          {
-            "date": "2026-11-18",
-            "cm": 5.08
-          },
           {
             "date": "2026-11-19",
             "cm": 0
@@ -72,6 +68,10 @@
           {
             "date": "2026-11-25",
             "cm": 0
+          },
+          {
+            "date": "2026-11-26",
+            "cm": 0
           }
         ],
         "newSnow7dCm": 27.9,
@@ -85,186 +85,186 @@
       },
       "forecast": {
         "timezone": "America/Denver",
-        "today": "2026-11-25",
+        "today": "2026-11-26",
         "modelSnowLast24hCm": 0,
-        "modelSnowLast7dCm": 3.8,
-        "next7dSnowCm": 15.3,
+        "modelSnowLast7dCm": 1.6,
+        "next7dSnowCm": 13.1,
         "days": [
-          {
-            "date": "2026-11-25",
-            "snowCm": 0,
-            "summitSnowCm": 0,
-            "tMaxC": 2.5,
-            "tMinC": -8.6,
-            "summitTMinC": -11.4,
-            "code": 3,
-            "windMaxKmh": 9.7,
-            "precipProb": 0
-          },
           {
             "date": "2026-11-26",
             "snowCm": 0,
             "summitSnowCm": 0,
-            "tMaxC": 2.9,
-            "tMinC": -5.1,
-            "summitTMinC": -7.9,
+            "tMaxC": 2.5,
+            "tMinC": -6,
+            "summitTMinC": -8.6,
             "code": 3,
-            "windMaxKmh": 17.6,
+            "windMaxKmh": 18.5,
             "precipProb": 0
           },
           {
             "date": "2026-11-27",
             "snowCm": 0,
             "summitSnowCm": 0,
-            "tMaxC": 1.9,
-            "tMinC": -5.7,
-            "summitTMinC": -8.8,
+            "tMaxC": 1.8,
+            "tMinC": -5,
+            "summitTMinC": -8.4,
             "code": 3,
-            "windMaxKmh": 12.4,
+            "windMaxKmh": 20.3,
             "precipProb": 14
           },
           {
             "date": "2026-11-28",
-            "snowCm": 14.1,
-            "summitSnowCm": 14.1,
-            "tMaxC": -0.9,
-            "tMinC": -13.4,
-            "summitTMinC": -16.5,
+            "snowCm": 12.9,
+            "summitSnowCm": 13.8,
+            "tMaxC": -1.4,
+            "tMinC": -10.7,
+            "summitTMinC": -13.8,
             "code": 86,
-            "windMaxKmh": 21.3,
+            "windMaxKmh": 22.8,
             "precipProb": 91
           },
           {
             "date": "2026-11-29",
-            "snowCm": 0.4,
-            "summitSnowCm": 0.4,
-            "tMaxC": -2.2,
-            "tMinC": -16.6,
-            "summitTMinC": -19.7,
+            "snowCm": 0.2,
+            "summitSnowCm": 0.2,
+            "tMaxC": -1.7,
+            "tMinC": -17.3,
+            "summitTMinC": -20.4,
             "code": 71,
-            "windMaxKmh": 8.9,
-            "precipProb": 17
+            "windMaxKmh": 9.7,
+            "precipProb": 9
           },
           {
             "date": "2026-11-30",
-            "snowCm": 0.8,
-            "summitSnowCm": 0.8,
-            "tMaxC": -0.6,
-            "tMinC": -12,
-            "summitTMinC": -15.1,
-            "code": 71,
-            "windMaxKmh": 16.3,
-            "precipProb": 32
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": 0.1,
+            "tMinC": -11.8,
+            "summitTMinC": -14.9,
+            "code": 3,
+            "windMaxKmh": 14.6,
+            "precipProb": 17
           },
           {
             "date": "2026-12-01",
             "snowCm": 0,
             "summitSnowCm": 0,
-            "tMaxC": 2.1,
-            "tMinC": -11.7,
-            "summitTMinC": -14.8,
-            "code": 45,
-            "windMaxKmh": 11,
-            "precipProb": 18
+            "tMaxC": 2.6,
+            "tMinC": -9.7,
+            "summitTMinC": -12.8,
+            "code": 3,
+            "windMaxKmh": 9.2,
+            "precipProb": 9
           },
           {
             "date": "2026-12-02",
-            "snowCm": 3.4,
-            "summitSnowCm": 3.4,
-            "tMaxC": 0.1,
-            "tMinC": -8.7,
-            "summitTMinC": -11.8,
-            "code": 85,
-            "windMaxKmh": 12.5,
-            "precipProb": 60
-          },
-          {
-            "date": "2026-12-03",
-            "snowCm": 4,
-            "summitSnowCm": 4,
-            "tMaxC": -2,
-            "tMinC": -11.9,
-            "summitTMinC": -15,
-            "code": 85,
-            "windMaxKmh": 11.9,
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": 2,
+            "tMinC": -9.1,
+            "summitTMinC": -12.2,
+            "code": 3,
+            "windMaxKmh": 9.7,
             "precipProb": 50
           },
           {
-            "date": "2026-12-04",
+            "date": "2026-12-03",
             "snowCm": 0,
             "summitSnowCm": 0,
-            "tMaxC": 2.1,
-            "tMinC": -13.6,
-            "summitTMinC": -16.7,
+            "tMaxC": 0.6,
+            "tMinC": -8.2,
+            "summitTMinC": -11.3,
             "code": 3,
-            "windMaxKmh": 12.1,
+            "windMaxKmh": 10,
+            "precipProb": 42
+          },
+          {
+            "date": "2026-12-04",
+            "snowCm": 0.2,
+            "summitSnowCm": 0.2,
+            "tMaxC": -1.2,
+            "tMinC": -7.4,
+            "summitTMinC": -10.5,
+            "code": 71,
+            "windMaxKmh": 8.7,
             "precipProb": 40
           },
           {
             "date": "2026-12-05",
-            "snowCm": 0.8,
-            "summitSnowCm": 0.8,
-            "tMaxC": 0.3,
-            "tMinC": -11.1,
-            "summitTMinC": -14.2,
-            "code": 85,
-            "windMaxKmh": 10.4,
-            "precipProb": 48
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": 0.8,
+            "tMinC": -7.4,
+            "summitTMinC": -10.5,
+            "code": 3,
+            "windMaxKmh": 10.2,
+            "precipProb": 34
           },
           {
             "date": "2026-12-06",
-            "snowCm": 12.6,
-            "summitSnowCm": 12.6,
-            "tMaxC": -9,
-            "tMinC": -10.7,
-            "summitTMinC": -13.8,
-            "code": 85,
-            "windMaxKmh": 17.4,
-            "precipProb": 52
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": 0.6,
+            "tMinC": -8.7,
+            "summitTMinC": -11.8,
+            "code": 3,
+            "windMaxKmh": 10.8,
+            "precipProb": 39
           },
           {
             "date": "2026-12-07",
-            "snowCm": 4.6,
-            "summitSnowCm": 4.6,
-            "tMaxC": -8.3,
-            "tMinC": -19.9,
-            "summitTMinC": -23,
-            "code": 85,
-            "windMaxKmh": 11.3,
-            "precipProb": 42
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": -1.6,
+            "tMinC": -9.5,
+            "summitTMinC": -12.6,
+            "code": 3,
+            "windMaxKmh": 9.8,
+            "precipProb": 32
           },
           {
             "date": "2026-12-08",
-            "snowCm": 4.8,
-            "summitSnowCm": 4.8,
-            "tMaxC": -8.6,
-            "tMinC": -20.7,
-            "summitTMinC": -23.8,
-            "code": 85,
-            "windMaxKmh": 19.8,
-            "precipProb": 23
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": -0.5,
+            "tMinC": -10.1,
+            "summitTMinC": -13.2,
+            "code": 3,
+            "windMaxKmh": 9.7,
+            "precipProb": 17
           },
           {
             "date": "2026-12-09",
-            "snowCm": 4.6,
-            "summitSnowCm": 4.6,
-            "tMaxC": -4.8,
-            "tMinC": -16.9,
-            "summitTMinC": -20,
-            "code": 85,
-            "windMaxKmh": 13.8,
-            "precipProb": 16
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": -1,
+            "tMinC": -10.2,
+            "summitTMinC": -13.3,
+            "code": 3,
+            "windMaxKmh": 10.3,
+            "precipProb": 33
           },
           {
             "date": "2026-12-10",
-            "snowCm": 5.7,
-            "summitSnowCm": 5.7,
-            "tMaxC": -2.6,
-            "tMinC": -12.7,
-            "summitTMinC": -15.8,
-            "code": 85,
-            "windMaxKmh": 13.3,
-            "precipProb": 48
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": -3.8,
+            "tMinC": -11.3,
+            "summitTMinC": -14.4,
+            "code": 45,
+            "windMaxKmh": 8.7,
+            "precipProb": 32
+          },
+          {
+            "date": "2026-12-11",
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": -3.9,
+            "tMinC": -13.2,
+            "summitTMinC": -16.3,
+            "code": 3,
+            "windMaxKmh": 8.8,
+            "precipProb": 31
           }
         ],
         "stale": false
@@ -377,19 +377,19 @@
         "station": "Tower SNOTEL (Buffalo Pass)",
         "stationElevM": 3234,
         "distanceKm": 13,
-        "asOf": "2026-11-24",
+        "asOf": "2026-11-25",
         "depthCm": 20.3,
         "depthChange24hCm": 0,
-        "depthChange7dCm": 5.1,
+        "depthChange7dCm": 7.6,
         "newSnow24hCm": 0,
         "newSnow7dCm": 10.2,
-        "sweMm": 43.2,
+        "sweMm": 45.7,
         "pctOfMedian": 20,
         "stale": false
       },
       "resortReport": {
         "source": "Resort snow report (via OnTheSnow)",
-        "updated": "Nov 24",
+        "updated": "Nov 26",
         "depthCm": null,
         "baseCm": null,
         "middleCm": null,
@@ -398,14 +398,6 @@
         "newSnow48hCm": 0,
         "newSnow72hCm": 0,
         "history": [
-          {
-            "date": "2026-11-17",
-            "cm": 0
-          },
-          {
-            "date": "2026-11-18",
-            "cm": 0
-          },
           {
             "date": "2026-11-19",
             "cm": 0
@@ -433,6 +425,10 @@
           {
             "date": "2026-11-25",
             "cm": 0
+          },
+          {
+            "date": "2026-11-26",
+            "cm": 0
           }
         ],
         "newSnow7dCm": 0,
@@ -446,186 +442,186 @@
       },
       "forecast": {
         "timezone": "America/Denver",
-        "today": "2026-11-25",
+        "today": "2026-11-26",
         "modelSnowLast24hCm": 0,
         "modelSnowLast7dCm": 1,
-        "next7dSnowCm": 28.6,
+        "next7dSnowCm": 23.9,
         "days": [
-          {
-            "date": "2026-11-25",
-            "snowCm": 0,
-            "summitSnowCm": 0,
-            "tMaxC": 2.8,
-            "tMinC": -7.7,
-            "summitTMinC": -10,
-            "code": 3,
-            "windMaxKmh": 13.6,
-            "precipProb": 0
-          },
           {
             "date": "2026-11-26",
             "snowCm": 0,
             "summitSnowCm": 0,
-            "tMaxC": 3.3,
-            "tMinC": -3.2,
-            "summitTMinC": -6.9,
+            "tMaxC": 2.3,
+            "tMinC": -5,
+            "summitTMinC": -8.3,
             "code": 3,
-            "windMaxKmh": 11.6,
-            "precipProb": 1
+            "windMaxKmh": 13.5,
+            "precipProb": 0
           },
           {
             "date": "2026-11-27",
             "snowCm": 0,
-            "summitSnowCm": 0,
-            "tMaxC": 1.8,
-            "tMinC": -3.6,
-            "summitTMinC": -7.6,
-            "code": 51,
-            "windMaxKmh": 20.5,
-            "precipProb": 38
+            "summitSnowCm": 0.3,
+            "tMaxC": 1.6,
+            "tMinC": -3.1,
+            "summitTMinC": -6.9,
+            "code": 3,
+            "windMaxKmh": 20.4,
+            "precipProb": 62
           },
           {
             "date": "2026-11-28",
-            "snowCm": 20,
-            "summitSnowCm": 20,
-            "tMaxC": -0.5,
-            "tMinC": -8.6,
-            "summitTMinC": -11.8,
+            "snowCm": 23.4,
+            "summitSnowCm": 30.7,
+            "tMaxC": -0.4,
+            "tMinC": -11,
+            "summitTMinC": -14.1,
             "code": 86,
-            "windMaxKmh": 31.9,
-            "precipProb": 92
+            "windMaxKmh": 30.4,
+            "precipProb": 96
           },
           {
             "date": "2026-11-29",
             "snowCm": 0.5,
             "summitSnowCm": 0.5,
-            "tMaxC": -3.2,
-            "tMinC": -15.1,
-            "summitTMinC": -18.2,
+            "tMaxC": -3,
+            "tMinC": -14.5,
+            "summitTMinC": -17.7,
             "code": 71,
-            "windMaxKmh": 10.8,
-            "precipProb": 22
+            "windMaxKmh": 11.2,
+            "precipProb": 5
           },
           {
             "date": "2026-11-30",
-            "snowCm": 8.1,
-            "summitSnowCm": 8.1,
-            "tMaxC": -1.8,
-            "tMinC": -11.2,
-            "summitTMinC": -14.3,
-            "code": 85,
-            "windMaxKmh": 14.8,
-            "precipProb": 48
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": -1.2,
+            "tMinC": -11.4,
+            "summitTMinC": -14.5,
+            "code": 3,
+            "windMaxKmh": 10.9,
+            "precipProb": 36
           },
           {
             "date": "2026-12-01",
             "snowCm": 0,
             "summitSnowCm": 0,
-            "tMaxC": 0.1,
-            "tMinC": -8.9,
-            "summitTMinC": -12,
+            "tMaxC": -0.4,
+            "tMinC": -10.2,
+            "summitTMinC": -13.3,
             "code": 51,
-            "windMaxKmh": 9.8,
-            "precipProb": 31
+            "windMaxKmh": 11.2,
+            "precipProb": 16
           },
           {
             "date": "2026-12-02",
-            "snowCm": 10.3,
-            "summitSnowCm": 10.3,
-            "tMaxC": -2.1,
-            "tMinC": -7.3,
-            "summitTMinC": -10.4,
-            "code": 75,
-            "windMaxKmh": 13.4,
-            "precipProb": 65
-          },
-          {
-            "date": "2026-12-03",
-            "snowCm": 3.8,
-            "summitSnowCm": 3.8,
-            "tMaxC": -2.4,
-            "tMinC": -11.2,
-            "summitTMinC": -14.3,
-            "code": 85,
-            "windMaxKmh": 15.1,
-            "precipProb": 60
-          },
-          {
-            "date": "2026-12-04",
             "snowCm": 0,
             "summitSnowCm": 0,
-            "tMaxC": -0.7,
-            "tMinC": -12,
-            "summitTMinC": -15.1,
+            "tMaxC": 0.8,
+            "tMinC": -6.6,
+            "summitTMinC": -9.7,
             "code": 3,
-            "windMaxKmh": 13.3,
-            "precipProb": 45
-          },
-          {
-            "date": "2026-12-05",
-            "snowCm": 0.2,
-            "summitSnowCm": 0.2,
-            "tMaxC": -1.1,
-            "tMinC": -7.1,
-            "summitTMinC": -10.2,
-            "code": 85,
-            "windMaxKmh": 14.3,
+            "windMaxKmh": 10.8,
             "precipProb": 49
           },
           {
+            "date": "2026-12-03",
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": 0.3,
+            "tMinC": -7.6,
+            "summitTMinC": -10.7,
+            "code": 3,
+            "windMaxKmh": 10,
+            "precipProb": 39
+          },
+          {
+            "date": "2026-12-04",
+            "snowCm": 0.4,
+            "summitSnowCm": 0.4,
+            "tMaxC": -1.1,
+            "tMinC": -4.9,
+            "summitTMinC": -8.1,
+            "code": 71,
+            "windMaxKmh": 9.4,
+            "precipProb": 37
+          },
+          {
+            "date": "2026-12-05",
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": 0.3,
+            "tMinC": -5.9,
+            "summitTMinC": -9.1,
+            "code": 51,
+            "windMaxKmh": 9.7,
+            "precipProb": 38
+          },
+          {
             "date": "2026-12-06",
-            "snowCm": 5.3,
-            "summitSnowCm": 5.3,
-            "tMaxC": -5.7,
-            "tMinC": -9.1,
-            "summitTMinC": -12.3,
-            "code": 85,
-            "windMaxKmh": 14.1,
-            "precipProb": 45
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": 0.5,
+            "tMinC": -5.9,
+            "summitTMinC": -9,
+            "code": 3,
+            "windMaxKmh": 11.6,
+            "precipProb": 41
           },
           {
             "date": "2026-12-07",
-            "snowCm": 5,
-            "summitSnowCm": 5,
-            "tMaxC": -7.4,
-            "tMinC": -14.4,
-            "summitTMinC": -17.6,
-            "code": 85,
-            "windMaxKmh": 13.7,
-            "precipProb": 39
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": -1.3,
+            "tMinC": -7.4,
+            "summitTMinC": -10.5,
+            "code": 3,
+            "windMaxKmh": 12.4,
+            "precipProb": 30
           },
           {
             "date": "2026-12-08",
-            "snowCm": 6.3,
-            "summitSnowCm": 6.3,
-            "tMaxC": -7.8,
-            "tMinC": -19.5,
-            "summitTMinC": -22.6,
-            "code": 85,
-            "windMaxKmh": 45.8,
-            "precipProb": 19
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": -0.4,
+            "tMinC": -7.2,
+            "summitTMinC": -10.4,
+            "code": 3,
+            "windMaxKmh": 9.5,
+            "precipProb": 25
           },
           {
             "date": "2026-12-09",
-            "snowCm": 18.3,
-            "summitSnowCm": 18.3,
-            "tMaxC": -4.3,
-            "tMinC": -12.8,
-            "summitTMinC": -16,
-            "code": 86,
-            "windMaxKmh": 25.2,
-            "precipProb": 19
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": -0.8,
+            "tMinC": -8.3,
+            "summitTMinC": -11.4,
+            "code": 3,
+            "windMaxKmh": 9.3,
+            "precipProb": 32
           },
           {
             "date": "2026-12-10",
-            "snowCm": 7.4,
-            "summitSnowCm": 7.4,
-            "tMaxC": -2.8,
-            "tMinC": -9.7,
-            "summitTMinC": -12.8,
-            "code": 73,
-            "windMaxKmh": 24.9,
-            "precipProb": 39
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": -3.8,
+            "tMinC": -9.9,
+            "summitTMinC": -13.1,
+            "code": 3,
+            "windMaxKmh": 7,
+            "precipProb": 35
+          },
+          {
+            "date": "2026-12-11",
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": -4.9,
+            "tMinC": -11.7,
+            "summitTMinC": -14.8,
+            "code": 3,
+            "windMaxKmh": 7.6,
+            "precipProb": 34
           }
         ],
         "stale": false
@@ -738,19 +734,19 @@
         "station": "Flattop Mtn SNOTEL",
         "stationElevM": 1914,
         "distanceKm": 51,
-        "asOf": "2026-11-24",
+        "asOf": "2026-11-25",
         "depthCm": 38.1,
-        "depthChange24hCm": -2.5,
-        "depthChange7dCm": 0,
+        "depthChange24hCm": 0,
+        "depthChange7dCm": 2.5,
         "newSnow24hCm": 0,
         "newSnow7dCm": 7.6,
         "sweMm": 88.9,
-        "pctOfMedian": 45,
+        "pctOfMedian": 44,
         "stale": false
       },
       "resortReport": {
         "source": "Resort snow report (via OnTheSnow)",
-        "updated": "Nov 20",
+        "updated": "Nov 26",
         "depthCm": 50.8,
         "baseCm": null,
         "middleCm": 40.64,
@@ -760,30 +756,6 @@
         "newSnow72hCm": 0,
         "history": [
           {
-            "date": "2026-11-13",
-            "cm": 0
-          },
-          {
-            "date": "2026-11-14",
-            "cm": 0
-          },
-          {
-            "date": "2026-11-15",
-            "cm": 0
-          },
-          {
-            "date": "2026-11-16",
-            "cm": 15.24
-          },
-          {
-            "date": "2026-11-17",
-            "cm": 10.16
-          },
-          {
-            "date": "2026-11-18",
-            "cm": 0
-          },
-          {
             "date": "2026-11-19",
             "cm": 0
           },
@@ -792,7 +764,27 @@
             "cm": 0
           },
           {
+            "date": "2026-11-21",
+            "cm": 0
+          },
+          {
+            "date": "2026-11-22",
+            "cm": 0
+          },
+          {
+            "date": "2026-11-23",
+            "cm": 0
+          },
+          {
+            "date": "2026-11-24",
+            "cm": 0
+          },
+          {
             "date": "2026-11-25",
+            "cm": 0
+          },
+          {
+            "date": "2026-11-26",
             "cm": 0
           }
         ],
@@ -807,186 +799,186 @@
       },
       "forecast": {
         "timezone": "America/Denver",
-        "today": "2026-11-25",
+        "today": "2026-11-26",
         "modelSnowLast24hCm": 0,
         "modelSnowLast7dCm": 1.1,
-        "next7dSnowCm": 9,
+        "next7dSnowCm": 24.4,
         "days": [
           {
-            "date": "2026-11-25",
-            "snowCm": 0,
-            "summitSnowCm": 0,
-            "tMaxC": -0.1,
-            "tMinC": -3.4,
-            "summitTMinC": -5.6,
-            "code": 45,
-            "windMaxKmh": 22.7,
-            "precipProb": 9
-          },
-          {
             "date": "2026-11-26",
-            "snowCm": 0,
-            "summitSnowCm": 2.5,
-            "tMaxC": 0.7,
-            "tMinC": -2.1,
-            "summitTMinC": -4.3,
-            "code": 53,
-            "windMaxKmh": 34.5,
-            "precipProb": 89
+            "snowCm": 12.4,
+            "summitSnowCm": 12.7,
+            "tMaxC": 0.1,
+            "tMinC": -1.8,
+            "summitTMinC": -4,
+            "code": 75,
+            "windMaxKmh": 35.5,
+            "precipProb": 87
           },
           {
             "date": "2026-11-27",
-            "snowCm": 0.3,
-            "summitSnowCm": 0.3,
+            "snowCm": 2.2,
+            "summitSnowCm": 2.2,
             "tMaxC": -0.3,
-            "tMinC": -7.1,
-            "summitTMinC": -9.3,
-            "code": 73,
-            "windMaxKmh": 30.6,
-            "precipProb": 37
+            "tMinC": -4.7,
+            "summitTMinC": -6.9,
+            "code": 75,
+            "windMaxKmh": 27.6,
+            "precipProb": 31
           },
           {
             "date": "2026-11-28",
-            "snowCm": 0.7,
-            "summitSnowCm": 0.7,
-            "tMaxC": -3.8,
-            "tMinC": -9.4,
-            "summitTMinC": -11.6,
-            "code": 71,
-            "windMaxKmh": 8,
-            "precipProb": 16
+            "snowCm": 0.9,
+            "summitSnowCm": 0.9,
+            "tMaxC": -2.5,
+            "tMinC": -9.3,
+            "summitTMinC": -11.5,
+            "code": 85,
+            "windMaxKmh": 17.9,
+            "precipProb": 2
           },
           {
             "date": "2026-11-29",
-            "snowCm": 0.7,
-            "summitSnowCm": 0.7,
-            "tMaxC": -4.3,
-            "tMinC": -8.4,
-            "summitTMinC": -10.5,
+            "snowCm": 1.9,
+            "summitSnowCm": 1.9,
+            "tMaxC": -4.2,
+            "tMinC": -9.6,
+            "summitTMinC": -11.8,
             "code": 73,
-            "windMaxKmh": 6.8,
-            "precipProb": 21
+            "windMaxKmh": 6,
+            "precipProb": 36
           },
           {
             "date": "2026-11-30",
-            "snowCm": 4.8,
-            "summitSnowCm": 4.8,
-            "tMaxC": -2.2,
-            "tMinC": -5.6,
-            "summitTMinC": -7.8,
+            "snowCm": 5.5,
+            "summitSnowCm": 5.5,
+            "tMaxC": -2,
+            "tMinC": -5,
+            "summitTMinC": -7.2,
             "code": 73,
-            "windMaxKmh": 5.2,
-            "precipProb": 49
+            "windMaxKmh": 7.9,
+            "precipProb": 74
           },
           {
             "date": "2026-12-01",
-            "snowCm": 2.5,
-            "summitSnowCm": 2.5,
-            "tMaxC": -1.3,
-            "tMinC": -3,
-            "summitTMinC": -5.2,
+            "snowCm": 1.3,
+            "summitSnowCm": 1.3,
+            "tMaxC": -1.9,
+            "tMinC": -8.2,
+            "summitTMinC": -10.4,
             "code": 85,
-            "windMaxKmh": 8.6,
-            "precipProb": 55
+            "windMaxKmh": 8.5,
+            "precipProb": 46
           },
           {
             "date": "2026-12-02",
-            "snowCm": 1.9,
-            "summitSnowCm": 1.9,
-            "tMaxC": -2,
-            "tMinC": -3.8,
-            "summitTMinC": -6,
-            "code": 85,
-            "windMaxKmh": 7.1,
-            "precipProb": 20
+            "snowCm": 0.2,
+            "summitSnowCm": 0.2,
+            "tMaxC": -2.6,
+            "tMinC": -9.4,
+            "summitTMinC": -11.6,
+            "code": 71,
+            "windMaxKmh": 6.1,
+            "precipProb": 9
           },
           {
             "date": "2026-12-03",
-            "snowCm": 0.2,
-            "summitSnowCm": 0.2,
-            "tMaxC": -2,
-            "tMinC": -7,
-            "summitTMinC": -9.2,
-            "code": 71,
-            "windMaxKmh": 6.6,
-            "precipProb": 17
+            "snowCm": 2.7,
+            "summitSnowCm": 2.7,
+            "tMaxC": -3.4,
+            "tMinC": -8.5,
+            "summitTMinC": -10.7,
+            "code": 73,
+            "windMaxKmh": 7,
+            "precipProb": 23
           },
           {
             "date": "2026-12-04",
-            "snowCm": 7.1,
-            "summitSnowCm": 7.1,
-            "tMaxC": -2.3,
-            "tMinC": -6.1,
-            "summitTMinC": -8.3,
+            "snowCm": 1.3,
+            "summitSnowCm": 1.3,
+            "tMaxC": -1.3,
+            "tMinC": -9.3,
+            "summitTMinC": -11.5,
             "code": 73,
-            "windMaxKmh": 5.3,
-            "precipProb": 22
+            "windMaxKmh": 7,
+            "precipProb": 19
           },
           {
             "date": "2026-12-05",
-            "snowCm": 1.5,
-            "summitSnowCm": 1.5,
-            "tMaxC": -1.5,
-            "tMinC": -3.5,
-            "summitTMinC": -5.7,
-            "code": 73,
-            "windMaxKmh": 3.9,
-            "precipProb": 17
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": -2.5,
+            "tMinC": -9.8,
+            "summitTMinC": -12,
+            "code": 45,
+            "windMaxKmh": 5.2,
+            "precipProb": 18
           },
           {
             "date": "2026-12-06",
-            "snowCm": 2.9,
-            "summitSnowCm": 2.9,
-            "tMaxC": -2.4,
-            "tMinC": -7.7,
-            "summitTMinC": -9.9,
-            "code": 85,
-            "windMaxKmh": 7.6,
-            "precipProb": 29
+            "snowCm": 0.4,
+            "summitSnowCm": 0.4,
+            "tMaxC": -4.8,
+            "tMinC": -12.6,
+            "summitTMinC": -14.8,
+            "code": 71,
+            "windMaxKmh": 7.7,
+            "precipProb": 14
           },
           {
             "date": "2026-12-07",
-            "snowCm": 5.3,
-            "summitSnowCm": 5.3,
-            "tMaxC": -4.1,
-            "tMinC": -11.1,
-            "summitTMinC": -13.3,
-            "code": 85,
-            "windMaxKmh": 12.4,
-            "precipProb": 21
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": -4.3,
+            "tMinC": -12.9,
+            "summitTMinC": -15.1,
+            "code": 45,
+            "windMaxKmh": 6.5,
+            "precipProb": 14
           },
           {
             "date": "2026-12-08",
-            "snowCm": 1.5,
-            "summitSnowCm": 1.5,
-            "tMaxC": -5.1,
-            "tMinC": -10.6,
-            "summitTMinC": -12.8,
-            "code": 85,
-            "windMaxKmh": 9.8,
-            "precipProb": 16
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": -5.9,
+            "tMinC": -13.6,
+            "summitTMinC": -15.8,
+            "code": 3,
+            "windMaxKmh": 5.8,
+            "precipProb": 13
           },
           {
             "date": "2026-12-09",
-            "snowCm": 3.8,
-            "summitSnowCm": 3.8,
-            "tMaxC": -4.2,
-            "tMinC": -11.6,
-            "summitTMinC": -13.8,
-            "code": 85,
-            "windMaxKmh": 7.5,
-            "precipProb": 35
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": -6,
+            "tMinC": -12.1,
+            "summitTMinC": -14.3,
+            "code": 3,
+            "windMaxKmh": 6.3,
+            "precipProb": 26
           },
           {
             "date": "2026-12-10",
-            "snowCm": 9,
-            "summitSnowCm": 9,
-            "tMaxC": -3.5,
-            "tMinC": -12,
-            "summitTMinC": -14.2,
-            "code": 75,
-            "windMaxKmh": 11.9,
-            "precipProb": 36
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": -4.4,
+            "tMinC": -11.8,
+            "summitTMinC": -14,
+            "code": 45,
+            "windMaxKmh": 4.7,
+            "precipProb": 19
+          },
+          {
+            "date": "2026-12-11",
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": -3.4,
+            "tMinC": -8.2,
+            "summitTMinC": -10.4,
+            "code": 3,
+            "windMaxKmh": 4,
+            "precipProb": 19
           }
         ],
         "stale": false
@@ -1099,31 +1091,27 @@
         "station": "JMA Hakuba village station",
         "stationElevM": 703,
         "distanceKm": 3,
-        "asOf": "2026-11-26T05:00+09:00",
-        "depthCm": 8,
+        "asOf": "2026-11-27T04:00+09:00",
+        "depthCm": 5,
         "depthChange24hCm": -3,
-        "depthChange7dCm": 8,
+        "depthChange7dCm": -4,
         "newSnow24hCm": 0,
-        "newSnow7dCm": 65,
+        "newSnow7dCm": 55,
         "sweMm": null,
         "pctOfMedian": null,
         "stale": false
       },
       "resortReport": {
         "source": "Resort snow report (via OnTheSnow)",
-        "updated": "Nov 25",
-        "depthCm": 110,
+        "updated": "Nov 26",
+        "depthCm": 130,
         "baseCm": null,
-        "middleCm": 110,
+        "middleCm": 130,
         "summitCm": null,
-        "newSnow24hCm": 3,
+        "newSnow24hCm": 0,
         "newSnow48hCm": 3,
-        "newSnow72hCm": 5,
+        "newSnow72hCm": 3,
         "history": [
-          {
-            "date": "2026-11-18",
-            "cm": 11
-          },
           {
             "date": "2026-11-19",
             "cm": 46
@@ -1151,9 +1139,13 @@
           {
             "date": "2026-11-25",
             "cm": 3
+          },
+          {
+            "date": "2026-11-26",
+            "cm": 0
           }
         ],
-        "newSnow7dCm": 141,
+        "newSnow7dCm": 95,
         "liftsOpen": 5,
         "liftsTotal": 94,
         "runsOpen": null,
@@ -1164,178 +1156,178 @@
       },
       "forecast": {
         "timezone": "Asia/Tokyo",
-        "today": "2026-11-26",
-        "modelSnowLast24hCm": 9.1,
-        "modelSnowLast7dCm": 90.6,
-        "next7dSnowCm": 19.5,
+        "today": "2026-11-27",
+        "modelSnowLast24hCm": 0,
+        "modelSnowLast7dCm": 73.9,
+        "next7dSnowCm": 28.6,
         "days": [
-          {
-            "date": "2026-11-26",
-            "snowCm": 0,
-            "summitSnowCm": 0,
-            "tMaxC": 5.3,
-            "tMinC": -1.8,
-            "summitTMinC": -4.9,
-            "code": 3,
-            "windMaxKmh": 9,
-            "precipProb": 2
-          },
           {
             "date": "2026-11-27",
             "snowCm": 0,
             "summitSnowCm": 0,
-            "tMaxC": 9.8,
-            "tMinC": -0.7,
-            "summitTMinC": -1.5,
-            "code": 1,
-            "windMaxKmh": 7.1,
-            "precipProb": 18
+            "tMaxC": 10.2,
+            "tMinC": 0.5,
+            "summitTMinC": -0.9,
+            "code": 61,
+            "windMaxKmh": 7.2,
+            "precipProb": 80
           },
           {
             "date": "2026-11-28",
             "snowCm": 0,
-            "summitSnowCm": 11.8,
-            "tMaxC": 11.2,
-            "tMinC": 0.4,
-            "summitTMinC": -3,
+            "summitSnowCm": 11.1,
+            "tMaxC": 9,
+            "tMinC": 0,
+            "summitTMinC": -3.7,
             "code": 63,
-            "windMaxKmh": 15.8,
+            "windMaxKmh": 18.1,
             "precipProb": 100
           },
           {
             "date": "2026-11-29",
-            "snowCm": 19.5,
-            "summitSnowCm": 27.9,
-            "tMaxC": 0.4,
-            "tMinC": -12.3,
-            "summitTMinC": -15.6,
-            "code": 95,
-            "windMaxKmh": 9.7,
+            "snowCm": 28.6,
+            "summitSnowCm": 38.4,
+            "tMaxC": 0,
+            "tMinC": -3.3,
+            "summitTMinC": -6.9,
+            "code": 75,
+            "windMaxKmh": 16.4,
             "precipProb": 100
           },
           {
             "date": "2026-11-30",
             "snowCm": 0,
             "summitSnowCm": 0,
-            "tMaxC": 8.2,
-            "tMinC": -12.3,
-            "summitTMinC": -15.3,
+            "tMaxC": 8.5,
+            "tMinC": -11.8,
+            "summitTMinC": -13.7,
             "code": 45,
-            "windMaxKmh": 2.3,
-            "precipProb": 5
+            "windMaxKmh": 6.9,
+            "precipProb": 0
           },
           {
             "date": "2026-12-01",
             "snowCm": 0,
             "summitSnowCm": 0,
-            "tMaxC": 7.8,
-            "tMinC": -4.5,
-            "summitTMinC": -5.1,
+            "tMaxC": 7.4,
+            "tMinC": -2.9,
+            "summitTMinC": -2.9,
             "code": 45,
-            "windMaxKmh": 4.9,
-            "precipProb": 34
+            "windMaxKmh": 5.8,
+            "precipProb": 35
           },
           {
             "date": "2026-12-02",
             "snowCm": 0,
             "summitSnowCm": 0,
-            "tMaxC": 9.8,
-            "tMinC": -4.5,
-            "summitTMinC": -5.1,
-            "code": 2,
-            "windMaxKmh": 1.3,
-            "precipProb": 31
+            "tMaxC": 9.7,
+            "tMinC": -4.3,
+            "summitTMinC": -4.9,
+            "code": 45,
+            "windMaxKmh": 2.7,
+            "precipProb": 10
           },
           {
             "date": "2026-12-03",
             "snowCm": 0,
             "summitSnowCm": 0,
-            "tMaxC": 8.7,
-            "tMinC": -1.6,
-            "summitTMinC": -2.5,
-            "code": 51,
-            "windMaxKmh": 2.7,
-            "precipProb": 84
+            "tMaxC": 6,
+            "tMinC": -2.5,
+            "summitTMinC": -3.7,
+            "code": 80,
+            "windMaxKmh": 4.1,
+            "precipProb": 72
           },
           {
             "date": "2026-12-04",
             "snowCm": 0,
             "summitSnowCm": 0,
-            "tMaxC": 6.8,
-            "tMinC": 0.5,
-            "summitTMinC": -0.6,
-            "code": 55,
-            "windMaxKmh": 5.3,
-            "precipProb": 55
+            "tMaxC": 7.7,
+            "tMinC": 1.1,
+            "summitTMinC": -2,
+            "code": 61,
+            "windMaxKmh": 3.7,
+            "precipProb": 52
           },
           {
             "date": "2026-12-05",
-            "snowCm": 2.2,
-            "summitSnowCm": 2.7,
-            "tMaxC": 6.1,
-            "tMinC": -2.3,
-            "summitTMinC": -7,
-            "code": 85,
-            "windMaxKmh": 12.1,
-            "precipProb": 81
+            "snowCm": 0.1,
+            "summitSnowCm": 1.1,
+            "tMaxC": 4.4,
+            "tMinC": -1.2,
+            "summitTMinC": -7.2,
+            "code": 81,
+            "windMaxKmh": 7.3,
+            "precipProb": 73
           },
           {
             "date": "2026-12-06",
-            "snowCm": 1.1,
-            "summitSnowCm": 3.5,
-            "tMaxC": -0.2,
-            "tMinC": -9,
-            "summitTMinC": -15,
+            "snowCm": 0.3,
+            "summitSnowCm": 0.6,
+            "tMaxC": 4,
+            "tMinC": -7.7,
+            "summitTMinC": -13.9,
             "code": 71,
-            "windMaxKmh": 6.9,
-            "precipProb": 70
+            "windMaxKmh": 4.2,
+            "precipProb": 67
           },
           {
             "date": "2026-12-07",
-            "snowCm": 8,
-            "summitSnowCm": 3.5,
-            "tMaxC": 3.3,
-            "tMinC": -9,
-            "summitTMinC": -15,
-            "code": 75,
-            "windMaxKmh": 6.4,
-            "precipProb": 59
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": 7,
+            "tMinC": -6.6,
+            "summitTMinC": -10.3,
+            "code": 80,
+            "windMaxKmh": 6.2,
+            "precipProb": 80
           },
           {
             "date": "2026-12-08",
-            "snowCm": 8.1,
-            "summitSnowCm": 11.2,
-            "tMaxC": 5.6,
-            "tMinC": -5.6,
-            "summitTMinC": -9.1,
-            "code": 86,
-            "windMaxKmh": 4.9,
-            "precipProb": 61
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": 8,
+            "tMinC": 3,
+            "summitTMinC": 0.8,
+            "code": 82,
+            "windMaxKmh": 4.3,
+            "precipProb": 80
           },
           {
             "date": "2026-12-09",
-            "snowCm": 19.6,
-            "summitSnowCm": 18.5,
-            "tMaxC": -1.2,
-            "tMinC": -8.1,
-            "summitTMinC": -13.6,
-            "code": 86,
-            "windMaxKmh": 10.4,
-            "precipProb": 47
+            "snowCm": 0.4,
+            "summitSnowCm": 2.5,
+            "tMaxC": 5.1,
+            "tMinC": -7,
+            "summitTMinC": -11.8,
+            "code": 85,
+            "windMaxKmh": 11.6,
+            "precipProb": 60
           },
           {
             "date": "2026-12-10",
-            "snowCm": 2.6,
-            "summitSnowCm": 3.3,
-            "tMaxC": -2.5,
-            "tMinC": -11,
-            "summitTMinC": -15.5,
-            "code": 86,
-            "windMaxKmh": 10.1,
-            "precipProb": 47
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": -0.3,
+            "tMinC": -10.5,
+            "summitTMinC": -15.8,
+            "code": 45,
+            "windMaxKmh": 7.4,
+            "precipProb": 52
           },
           {
             "date": "2026-12-11",
+            "snowCm": 0,
+            "summitSnowCm": 0,
+            "tMaxC": -1.1,
+            "tMinC": -10.5,
+            "summitTMinC": -15.8,
+            "code": 3,
+            "windMaxKmh": 7.7,
+            "precipProb": 61
+          },
+          {
+            "date": "2026-12-12",
             "snowCm": null,
             "summitSnowCm": null,
             "tMaxC": null,
@@ -1343,7 +1335,7 @@
             "summitTMinC": null,
             "code": null,
             "windMaxKmh": null,
-            "precipProb": 36
+            "precipProb": 50
           }
         ],
         "stale": false
